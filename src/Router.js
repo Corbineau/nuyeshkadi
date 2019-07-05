@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Wod from './components/Wod/Wod';
 import Admin from './components/Admin/Admin';
-import Min from './components/Min';
+import Min from './components/Min/Min';
 
 
 class Router extends Component {
@@ -13,7 +13,7 @@ class Router extends Component {
             <Route exact path='/' component={Wod}/>
             <Route path='/index' component={Wod}/>
             <Route path='/admin' component={Admin}/>
-            <Route path='*' component={Min}/>
+            <Route component={Min}/>
           </Switch>
         </div>
       )

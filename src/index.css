@@ -1,13 +1,16 @@
 @font-face {
   font-family: 'AiNaidar';
-  src: local('AiNaidar'), url(./fonts/ai-naidar-1.3.ttf) format('ttf');
+  src: local('AiNaidar'), url(./fonts/ai-nadar-1.3.ttf) format('ttf');
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Gruppo", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* font-family: 'Tangerine', cursive;
+font-family: 'Gruppo', cursive; */

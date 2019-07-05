@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Router from './Router';
 import TheHead from './components/TheHead/TheHead';
-import TheFoot from './components/TheFoot';
+import TheFoot from './components/TheFoot/TheFoot';
 
 class App extends Component {
   render() {
