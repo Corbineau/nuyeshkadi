@@ -32,6 +32,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 
+if (process.env.NODE_ENV === "production") {
+    // Express will serve up production assets
+    app.use(express.static("build"));
+}
+
 
 
 // append /api for our http requests
