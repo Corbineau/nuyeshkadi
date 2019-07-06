@@ -5,42 +5,44 @@ import './Admin.css';
 class Admin extends Component {
 state = {
     data: [],
-    fields: null,
-    intervalIsSet: false,
-    idToDelete: null,
-    idToUpdate: null,
-    objectToUpdate: null,
+    newWord: ""
   };
 
   // when component mounts, first thing it does is fetch all existing data in our db
   // then we incorporate a polling logic so that we can easily see if our db has
   // changed and implement those changes into our UI
-//   componentDidMount() {
-//     this.getDataFromDb();
-//     if (!this.state.intervalIsSet) {
-//       let interval = setInterval(this.getDataFromDb, 1000);
-//       this.setState({ intervalIsSet: interval });
-//     }
-//   }
+  componentDidMount() {
+    // this.getDataFromDb();
+    
+  }
 
   // never let a process live forever
   // always kill a process everytime we are done using it
-//   componentWillUnmount() {
-//     if (this.state.intervalIsSet) {
-//       clearInterval(this.state.intervalIsSet);
-//       this.setState({ intervalIsSet: null });
-//     }
-//   }
+  // componentWillUnmount() {
+  //   if (this.state.intervalIsSet) {
+  //     clearInterval(this.state.intervalIsSet);
+  //     this.setState({ intervalIsSet: null });
+  //   }
+  // }
 
-  // just a note, here, in the front end, we use the id key of our data object
-  // in order to identify which we want to Update or delete.
-  // for our back end, we use the object id assigned by MongoDB to modify
-  // data base entries
+  handleStateChange = event => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleWordSubmit = event => {
+    event.preventDefault();
+    this.addWord(this.state.newWord);
+  };
+
+ 
 
   // our first get method that uses our backend api to
   // fetch data from our data base
   getDataFromDb = () => {
-    fetch('http://localhost:3001/api/getData')
+    fetch('/api/getData')
       .then((data) => data.json())
       .then((res) => this.setState({ data: res.data }));
   };
@@ -54,7 +56,7 @@ state = {
       ++idToBeAdded;
     }
 
-    axios.post('http://localhost:3001/api/putData', {
+    axios.post('/api/putData', {
       id: idToBeAdded,
       message: message,
     });
@@ -71,7 +73,7 @@ state = {
       }
     });
 
-    axios.delete('http://localhost:3001/api/deleteData', {
+    axios.delete('/api/deleteData', {
       data: {
         id: objIdToDelete,
       },
@@ -89,32 +91,34 @@ state = {
       }
     });
 
-    axios.post('http://localhost:3001/api/updateData', {
+    axios.post('/api/updateData', {
       id: objIdToUpdate,
       update: { message: updateToApply },
     });
   };
 
-  // here is our UI
-  // it is easy to understand their functions when you
-  // see them render into our screen
-  render() {
-    const { data } = this.state;
-    return (
-      <div>
-        <ul>
+  // 
+
+  /* <ul>
           {data.length <= 0
             ? 'NO DB ENTRIES YET'
             : data.map((dat) => (
                 <li style={{ padding: '10px' }} key={data.message}>
-                  <span style={{ color: 'gray' }}> id: </span> {dat.id} <br />
-                  <span style={{ color: 'gray' }}> data: </span>
-                  {dat.message}
+                  <span style={{ color: 'gray' }}> word: </span> {dat.word} <br />
+                  <span style={{ color: 'gray' }}> meaning: </span>
+                  {dat.meaning}
                 </li>
               ))}
-        </ul>
+        </ul> */
+
+
+  render() {
+    const { data } = this.state;
+    return (
+      <div>
+        
         <div style={{ padding: '10px' }}>
-          <input
+        <input
             type="text"
             onChange={(e) => this.setState({ message: e.target.value })}
             placeholder="add something in the database"

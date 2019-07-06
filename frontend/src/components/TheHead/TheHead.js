@@ -1,5 +1,7 @@
 import React from 'react';
 import './theHead.css';
+require('typeface-tangerine')
+
 
 function TheHead() {
   return (

@@ -3,6 +3,7 @@ import './App.css';
 import Router from './Router';
 import TheHead from './components/TheHead/TheHead';
 import TheFoot from './components/TheFoot/TheFoot';
+require('typeface-tangerine');
 
 class App extends Component {
   render() {
