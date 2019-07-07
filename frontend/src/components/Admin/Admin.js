@@ -37,15 +37,13 @@ state = {
     this.addWord(this.state.newWord);
   };
 
- 
 
-  // our first get method that uses our backend api to
-  // fetch data from our data base
-  getDataFromDb = () => {
-    fetch('/api/getData')
-      .then((data) => data.json())
-      .then((res) => this.setState({ data: res.data }));
-  };
+
+  getAword = (search) => {
+    fetch('/api/search')
+    .then((result => result.json()))
+    .then((res) => this.setState({ data: res.data}))
+  }
 
   // our put method that uses our backend api
   // to create new query into our data base
@@ -120,8 +118,10 @@ state = {
         <div style={{ padding: '10px' }}>
         <input
             type="text"
+            name="word"
+            value="this.state.value"
             onChange={(e) => this.setState({ message: e.target.value })}
-            placeholder="add something in the database"
+            placeholder="add a word"
             style={{ width: '200px' }}
           />
           <button onClick={() => this.putDataToDB(this.state.message)}>

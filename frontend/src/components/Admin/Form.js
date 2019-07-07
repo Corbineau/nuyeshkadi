@@ -4,18 +4,36 @@ function AddForm(props) {
   return (
     <form>
       <div className="form-group">
-        <label htmlFor="search">Search:</label>
+        <label htmlFor="word">Add:</label>
         <input
           onChange={props.handleInputChange}
-          value={props.search}
+          value={props.add}
+          name="word"
+          type="text"
+          className="form-control"
+          placeholder="Add a Word"
+          id="word"
+        />
+        <input
+          onChange={props.handleInputChange}
+          value={props.add}
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search for a Gif"
+          placeholder="Add a Word"
+          id="search"
+        />
+        <input
+          onChange={props.handleInputChange}
+          value={props.add}
+          name="search"
+          type="text"
+          className="form-control"
+          placeholder="Add a Word"
           id="search"
         />
         <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
-          Search
+          Add
         </button>
       </div>
     </form>

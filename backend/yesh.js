@@ -9,9 +9,11 @@ const YeshSchema = new Schema(
     pronounciation: String,
     partOfSpeech: String,
     meaning: String,
-    category: Array,
-    jargon: String,
-    qualities: Array,
+    sorters: {
+      category: Array,
+      qualities: Array,
+      sort: Array
+    },
     etymology: {
         source: String,
         relatedWords: Array,

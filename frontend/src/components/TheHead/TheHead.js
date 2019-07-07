@@ -1,6 +1,6 @@
 import React from 'react';
 import './theHead.css';
-require('typeface-tangerine')
+require('typeface-tangerine');
 
 
 function TheHead() {
