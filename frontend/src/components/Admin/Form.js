@@ -12,7 +12,6 @@ function AddForm(props) {
           type="text"
           className="form-control"
           placeholder="Add a Word"
-          id="word"
         />
         <input
           onChange={props.handleInputChange}
@@ -21,7 +20,6 @@ function AddForm(props) {
           type="text"
           className="form-control"
           placeholder="pronunciation"
-          id="pronunciation"
         />
         <input
           onChange={props.handleInputChange}
@@ -30,7 +28,6 @@ function AddForm(props) {
           type="text"
           className="form-control"
           placeholder="part of speech"
-          id="pos"
         />
         <input
           onChange={props.handleInputChange}
@@ -39,9 +36,8 @@ function AddForm(props) {
           type="text"
           className="form-control"
           placeholder="meaning"
-          id="meaning"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
+        <button onClick={props.handleFormSubmit} >
           Add
         </button>
       </div>
