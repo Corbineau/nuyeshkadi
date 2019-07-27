@@ -3,7 +3,7 @@ const router = express.Router();
 
 // this is our get method
 // this method fetches all available data in our database
-router.get('/getData', (req, res) => {
+router.get('/yesh', (req, res) => {
     Yesh.find((err, data) => {
       if (err) return res.json({ success: false, error: err });
       return res.json({ success: true, data: data });
@@ -11,19 +11,13 @@ router.get('/getData', (req, res) => {
   });
 
 
-router.get('/searchEng', (req, res) => {
+router.get('/yesh', (req, res) => {
     Yesh.find(
         {sort : "" }
         )
 
 });
 
-router.get('/searchAiNaidar', (req, res) => {
-    Yesh.find(
-        {word : "" }
-        )
-
-});
   
   // this is our update method
   // this method overwrites existing data in our database
@@ -50,7 +44,7 @@ router.get('/searchAiNaidar', (req, res) => {
   router.post('/putYesh', (req, res) => {
     let Yesh = new Yesh();
   
-    const { id, message } = req.body;
+    const {  } = req.body;
   
     if ((!id && id !== 0) || !message) {
       return res.json({

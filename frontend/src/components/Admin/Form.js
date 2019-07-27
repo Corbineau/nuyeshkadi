@@ -1,48 +1,25 @@
 import React from "react";
 
-function AddForm(props) {
+export function Input(props) {
   return (
-    <form>
-      <div className="form-group">
-        <label htmlFor="word">Add:</label>
-        <input
-          onChange={props.handleInputChange}
-          value={props.add}
-          name="word"
-          type="text"
-          className="form-control"
-          placeholder="Add a Word"
-        />
-        <input
-          onChange={props.handleInputChange}
-          value={props.pron}
-          name="pronunciation"
-          type="text"
-          className="form-control"
-          placeholder="pronunciation"
-        />
-        <input
-          onChange={props.handleInputChange}
-          value={props.pos}
-          name="partOfSpeech"
-          type="text"
-          className="form-control"
-          placeholder="part of speech"
-        />
-        <input
-          onChange={props.handleInputChange}
-          value={props.mean}
-          name="meaning"
-          type="text"
-          className="form-control"
-          placeholder="meaning"
-        />
-        <button onClick={props.handleFormSubmit} >
-          Add
-        </button>
-      </div>
-    </form>
+    <div className="form-group">
+      <input className="form-control" {...props} />
+    </div>
   );
 }
 
-export default AddForm;
+export function TextArea(props) {
+  return (
+    <div className="form-group">
+      <textarea className="form-control" rows="20" {...props} />
+    </div>
+  );
+}
+
+export function FormBtn(props) {
+  return (
+    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+      {props.children}
+    </button>
+  );
+}

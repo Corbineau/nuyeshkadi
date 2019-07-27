@@ -1,101 +1,138 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Form from './Form'
+// import axios from 'axios';
+import {Input, TextArea, FormBtn} from './Form'
 import './Admin.css';
+import API from '../../API';
 
 class Admin extends Component {
-state = {
-    data: [],
-    newWord: {}
-  };
+    state = {
+      data: [],
+      search: {
+        searchType: "",
+        searchTerm: ""
+      },
+      newWord: {
+        word: "",
+        pronunciation: "",
+        partOfSpeech: "",
+        meaning: ""
 
-  // when component mounts, do some damn thing.
-  componentDidMount() {
-    // this.getDataFromDb();
-    
-  }
+      }
+    };
 
-
-  handleStateChange = event => {
-    const {name, value} = event.target;
-    this.setState({
-      [name]: value
-    })
-  }
-
-  handleWordSubmit = newWord => {
-    event.preventDefault();
-    this.addWord(this.state.newWord);
-  };
+    // when component mounts, do some damn thing.
+    // componentDidMount() {
+    //   // this.getDataFromDb();
+      
+    // }
 
 
-
-  getAword = (search) => {
-    fetch('/api/search')
-    .then((result => result.json()))
-    .then((res) => this.setState({ data: res.data}))
-  }
-
-  // our put method that uses our backend api
-  // to create new query into our data base
-  putDataToDB = (message) => {
-    let currentIds = this.state.data.map((data) => data.id);
-    let idToBeAdded = 0;
-    while (currentIds.includes(idToBeAdded)) {
-      ++idToBeAdded;
+    handleStateChange = event => {
+      const { name, value } = event.target;
+      this.setState({
+        [name]: value
+      })
+      console.log(this.state);
     }
 
-    axios.post('/api/putData', {
-      id: idToBeAdded,
-      message: message,
-    });
-  };
-
-  // our delete method that uses our backend api
-  // to remove existing database information
-  deleteFromDB = (idTodelete) => {
-    parseInt(idTodelete);
-    let objIdToDelete = null;
-    this.state.data.forEach((dat) => {
-      if (dat.id === idTodelete) {
-        objIdToDelete = dat._id;
-      }
-    });
-
-    axios.delete('/api/deleteData', {
-      data: {
-        id: objIdToDelete,
-      },
-    });
-  };
-
-  // our update method that uses our backend api
-  // to overwrite existing data base information
-  updateDB = (idToUpdate, updateToApply) => {
-    let objIdToUpdate = null;
-    parseInt(idToUpdate);
-    this.state.data.forEach((dat) => {
-      if (dat.id === idToUpdate) {
-        objIdToUpdate = dat._id;
-      }
-    });
-
-    axios.post('/api/updateData', {
-      id: objIdToUpdate,
-      update: { message: updateToApply },
-    });
-  };
+    handleWordSubmit = event => {
+      event.preventDefault();
+      this.addWord();
+      console.log(this.state);
+    };
 
 
-  render() {
-    
-    return (
-      <div>
-        <Form />
+    handleSearchSubmit = event => {
+      event.preventDefault();
+      this.getWords();
+      console.log(this.state);
+    };
+
+    getWords = () => {
+      let search = this.state.search;
+      //when calling this function, searchType should pass what db field to search, and searchTerm will specify the term.
+      API.getWords(search.searchType, search.searchTerm)
+        .then((result => result.json()))
+        .then((res) => this.setState({ data: res.data }))
+    }
+
+    addWord = () => {
+      let word = this.state.newWord;
+
+
+    }
+
+
+
+    render() {
+
+      return (
+        <div>
+          <Input 
+            value={this.state.word}
+            onChange={this.handleStateChange}
+            name="newWord.word"
+            placeholder="enter a new word"
+          />
+          <Input 
+            value={this.state.pronunciation}
+            onChange={this.handleStateChange}
+            name="newWord.pronunciation"
+            placeholder="enter pronunciation"
+          />
+          <select 
+            value={this.state.partOfSpeech}
+            onChange={this.handleStateChange}
+            name="newWord.partOfSpeech"
+            placeholder="select Part of Speech"
+          >
+            <option value="noun">noun</option>
+            <option value="verb">verb</option>
+            <option value="adjective">adjective</option>
+            <option value="conjunction">conjunction</option>
+            <option value="pronoun">pronoun</option>
+            <option value="adverb">adverb</option>
+            <option value="article">article</option>
+            <option value="pragmatic">pragmatic</option>
+          </select>
+          <TextArea 
+            value={this.state.meaning}
+            onChange={this.handleStateChange}
+            name="newWord.meaning"
+            placeholder="enter definition"
+          />
+          <FormBtn
+          onClick={this.handleWordSubmit}
+          value="submit"
+          >
+            submit
+          </FormBtn>
+
+          <select name="search.searchType"
+            value={this.state.searchType}
+            onChange={this.handleStateChange}>
+            <option value="yesh">Ai-Naidar word</option>
+            <option value="meaning">meaning</option>
+            <option value="pos">Part of Speech</option>
+          </select>
+          <Input name="search.searchTerm"
+            onChange={this.handleStateChange}
+            value={this.state.searchTerm}
+            placeholder="search for a word here"
+          />
+          <FormBtn
+            onClick={this.handleSearchSubmit}
+            value="submit"
+          >
+            search
+        </FormBtn>
+        <div className="searchResults">
+          Search Results will go here.
         </div>
-    )
+        </div>
+      )
+    }
   }
-}
 
 
 

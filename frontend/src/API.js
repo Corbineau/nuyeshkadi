@@ -5,9 +5,9 @@ export default {
   getWords: function() {
     return axios.get("/api/yesh");
   },
-  // Get a word
-  getWord: function(id) {
-    return axios.get(`/api/yesh/${id}`);
+  // Get all words that match terms
+  getWord: function(type, term) {
+    return axios.get(`/api/yesh?type=${type}term=${term}`);
   },
   // Deletes the word with the given id
   deleteWord: function(id) {
@@ -15,9 +15,9 @@ export default {
   },
   // Saves a word to the database
   saveWord: function(wordData) {
-    return axios.post(`/api/yesh/${id}`);
+    return axios.post(`/api/yesh/`);
   },
-  getWod: function(date) {
+  getTan: function(date) {
       return axios.get(`/api/tan/${date}`)
   }
 };
