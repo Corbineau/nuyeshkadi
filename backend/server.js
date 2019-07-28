@@ -3,7 +3,7 @@ const express = require('express');
 var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
-const Yesh = require('./yesh');
+const models = require('./models');
 
 const API_PORT = process.env.API_PORT || 3001;
 const app = express();
