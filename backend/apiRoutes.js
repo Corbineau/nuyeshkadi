@@ -10,7 +10,7 @@ router.get('/yesh', (req, res) => {
     });
   });
 
-
+//this is the one for the term and type searching
 router.get('/yesh', (req, res) => {
     Yesh.find(
         {sort : "" }
@@ -21,7 +21,7 @@ router.get('/yesh', (req, res) => {
   
   // this is our update method
   // this method overwrites existing data in our database
-  router.post('/updateData', (req, res) => {
+  router.post('/yesh', (req, res) => {
     const { id, update } = req.body;
     Yesh.findByIdAndUpdate(id, update, (err) => {
       if (err) return res.json({ success: false, error: err });
@@ -31,7 +31,7 @@ router.get('/yesh', (req, res) => {
   
   // this is our delete method
   // this method removes existing data in our database
-  router.delete('/deleteData', (req, res) => {
+  router.delete('/yesh', (req, res) => {
     const { id } = req.body;
     Yesh.findByIdAndRemove(id, (err) => {
       if (err) return res.send(err);
@@ -41,7 +41,7 @@ router.get('/yesh', (req, res) => {
   
   // this is our create methid
   // this method adds new Yesh in our Yeshbase
-  router.post('/putYesh', (req, res) => {
+  router.post('/yesh', (req, res) => {
     let Yesh = new Yesh();
   
     const {  } = req.body;
@@ -52,8 +52,10 @@ router.get('/yesh', (req, res) => {
         error: 'INVALID INPUTS',
       });
     }
-    yesh.word  = word;
-    yesh.id = id;
+    yesh.word = word;
+    yesh.pronunciation = pronunciation;
+    yesh.partOfSpeech = partOfSpeech;
+    yesh.meaning = meaning;
     yesh.save((err) => {
       if (err) return res.json({ success: false, error: err });
       return res.json({ success: true });
