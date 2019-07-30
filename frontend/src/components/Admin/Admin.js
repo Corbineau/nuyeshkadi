@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import {Input, TextArea, FormBtn} from './Form'
 import './Admin.css';
-import API from '../../API';
+import API from '../../utils/API';
 
 class Admin extends Component {
     state = {
@@ -15,7 +15,8 @@ class Admin extends Component {
         word: "",
         pronunciation: "",
         partOfSpeech: "",
-        meaning: ""
+        meaning: "",
+        
 
       }
     };
