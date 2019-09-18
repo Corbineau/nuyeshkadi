@@ -53,8 +53,8 @@ class Admin extends Component {
       let search = this.state.search;
       //when calling this function, searchType should pass what db field to search, and searchTerm will specify the term.
       API.getWords(search.searchType, search.searchTerm)
-        .then((result => result.json()))
-        .then((res) => this.setState({ data: res.data }))
+        .then(result => result.json())
+        .then(res => this.setState({ data: res.data }))
     }
 
     addWord = () => {

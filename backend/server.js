@@ -3,7 +3,7 @@ const express = require('express');
 var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
-const models = require('./models');
+
 
 const API_PORT = process.env.API_PORT || 3001;
 const app = express();
@@ -14,10 +14,6 @@ const router = express.Router();
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-flexible-35753";
 mongoose.connect(MONGODB_URI);
 
-// const dbRoute =
-//   'mongodb://<your-db-username-here>:<your-db-password-here>@ds249583.mlab.com:49583/fullstack_app';
-
-// connects our back end code with the database
 
 let db = mongoose.connection;
 
