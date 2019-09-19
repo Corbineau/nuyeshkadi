@@ -4,6 +4,7 @@ import './Wod.css';
 class Wod extends Component {
     state = {
         date: new Date(),
+        tan: {},
     }
 
     /* FUNCTIONALITY
