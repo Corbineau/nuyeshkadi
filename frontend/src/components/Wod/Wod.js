@@ -3,7 +3,11 @@ import './Wod.css';
 
 class Wod extends Component {
     state = {
-        date: new Date(),
+        today, //state.today should be the real current day in either cron format maybe? dd-mm-yyyy
+        // date: new Date(),
+        thisday, //the day that is being displayed (for viewing old words)
+        yesterday, // the day before thisday
+        nextday, // the day after thisday
         tan: {},
     }
 
@@ -14,9 +18,14 @@ class Wod extends Component {
     */
 
     componentDidMount() {
-        //pull the word associated with the day. This should probably be a whole doc.
+        //pull the word associated with the day from the tan model. This should probably be a whole doc.
     }
-    
+
+    getNewWord = function() {
+        const day = state.today
+        
+    }
+
     render() {
 
 
@@ -24,14 +33,24 @@ class Wod extends Component {
         return (
             <div className="content">
                 <div id="word">
-        
+                    <div id="showWord"> 
+                    </div>
+                    <div id="pronunciation">
+
+                    </div>
+                    <div id="meaning">
+
+                    </div>
+                    <div id="orthography">
+
+                    </div>
                 </div>
-              
-              
+
+
             </div>
-          );
+        );
     }
-  
+
 }
 
 export default Wod;
