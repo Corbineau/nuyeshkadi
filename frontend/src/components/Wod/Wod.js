@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Wod.css';
+import API from '../../utils/API';
+const schedule = require('node-schedule');
 
 class Wod extends Component {
     state = {
@@ -18,12 +20,14 @@ class Wod extends Component {
     */
 
     componentDidMount() {
+        API.getTan(today)
         //pull the word associated with the day from the tan model. This should probably be a whole doc.
     }
 
     getNewWord = function() {
-        const day = state.today
-        
+        const runJob = schedule.scheduleJob('0 0 */1 * *', () => {
+            
+        }); 
     }
 
     render() {
