@@ -12,7 +12,7 @@ const router = express.Router();
 
 // this is our MongoDB database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-flexible-35753";
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 
 let db = mongoose.connection;

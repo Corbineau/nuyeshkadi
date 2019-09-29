@@ -39,7 +39,7 @@ router.get('/yesh', (req, res) => {
     });
   });
   
-  // this is our create methid
+  // this is our create method
   // this method adds new Yesh in our Yeshbase
   router.post('/yesh', (req, res) => {
     let Yesh = new Yesh();
@@ -56,6 +56,13 @@ router.get('/yesh', (req, res) => {
     yesh.pronunciation = pronunciation;
     yesh.partOfSpeech = partOfSpeech;
     yesh.meaning = meaning;
+    yesh.sorters.category = category;
+    yesh.sorters.qualities = qualities;
+    yesh.sorters.sort = sort;
+    yesh.etymology.source = source;
+    yesh.etymology.relatedWords = relatedWords;
+    yesh.etymology.roots = roots;
+    yesh.orthography = orthography;
     yesh.save((err) => {
       if (err) return res.json({ success: false, error: err });
       return res.json({ success: true });

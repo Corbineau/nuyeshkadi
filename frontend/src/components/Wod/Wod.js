@@ -20,20 +20,14 @@ class Wod extends Component {
     */
 
     componentDidMount() {
-        API.getTan(today)
+        API.getTan(this.state.today)
         //pull the word associated with the day from the tan model. This should probably be a whole doc.
     }
 
     getNewWord = function() {
-<<<<<<< HEAD
-        const day = this.state.today
-        
-=======
         const runJob = schedule.scheduleJob('0 0 */1 * *', () => {
             
-        }); 
->>>>>>> 651717f89fe71bb57ad7c9abd5c49a04bcbd11b0
-    }
+        });     }
 
     render() {
 
