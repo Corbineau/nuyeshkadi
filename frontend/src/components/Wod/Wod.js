@@ -3,11 +3,11 @@ import './Wod.css';
 
 class Wod extends Component {
     state = {
-        today, //state.today should be the real current day in either cron format maybe? dd-mm-yyyy
+        today: "", //state.today should be the real current day in either cron format maybe? dd-mm-yyyy
         // date: new Date(),
-        thisday, //the day that is being displayed (for viewing old words)
-        yesterday, // the day before thisday
-        nextday, // the day after thisday
+        thisday: "", //the day that is being displayed (for viewing old words)
+        yesterday: "", // the day before thisday
+        nextday: "", // the day after thisday
         tan: {},
     }
 
@@ -22,7 +22,7 @@ class Wod extends Component {
     }
 
     getNewWord = function() {
-        const day = state.today
+        const day = this.state.today
         
     }
 
