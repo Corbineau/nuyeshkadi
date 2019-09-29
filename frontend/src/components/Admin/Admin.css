@@ -1,0 +1,12 @@
+#newForm {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    align-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+Input {
+    display: inline-flex;
+}

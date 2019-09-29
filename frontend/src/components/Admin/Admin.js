@@ -68,7 +68,7 @@ class Admin extends Component {
     render() {
 
       return (
-        <div>
+        <div id="newForm">
           <Input 
             value={this.state.word}
             onChange={this.handleStateChange}
@@ -113,7 +113,7 @@ class Admin extends Component {
             value={this.state.searchType}
             onChange={this.handleStateChange}>
             <option value="yesh">Ai-Naidar word</option>
-            <option value="meaning">meaning</option>
+            <option value="sort">English word</option>
             <option value="pos">Part of Speech</option>
           </select>
           <Input name="search.searchTerm"

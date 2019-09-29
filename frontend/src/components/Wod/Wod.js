@@ -36,13 +36,16 @@ class Wod extends Component {
         return (
             <div className="content">
                 <div id="word">
+                    
                     <div id="showWord"> 
                     </div>
-                    <div id="pronunciation">
+                    <span id="pronunciation">
 
-                    </div>
+                    </span>
                     <div id="meaning">
-
+                        <p>
+                            meaning: <span id="wordMeaning"></span>
+                        </p>
                     </div>
                     <div id="orthography">
 
