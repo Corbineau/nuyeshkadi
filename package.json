@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Corbineau/nuyeshkadi#readme",
   "dependencies": {
-    "concurrently": "^4.1.1"
+    "concurrently": "^4.1.1",
+    "node-schedule": "^1.3.2"
   }
 }
