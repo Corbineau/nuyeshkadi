@@ -1,13 +1,22 @@
 import React from "react";
 import "./Word.css"
 
-function Word({ word_of_day, date }) {
+//Actually, I think I want the date and the word outside of this component, so that I can reuse it in different contexts? IDK.
+
+function Word({ yesh, meaning, pronunciation, partOfSpeech}) {
     return (
-        <div className="review">
-            <strong>{word_of_day}</strong> -- {date}
-            <div>{review_text}</div>
+        <div className="word">
+            <p>
+                <strong>{yesh}</strong>
+            </p>
+            <div className="types">
+                {pronunciation} {partOfSpeech}
+            </div>
+            <div className="meaning">
+                {meaning}
+            </div>
         </div>
     );
 }
 
-export default ReviewCard;
+export default Word;
