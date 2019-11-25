@@ -17,6 +17,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     create: function(req, res) {
+        //this is the one that should run on a schedule.
       db.Tan
         .insertOne(req.body)
         .then(dbModel => res.json(dbModel))
@@ -28,11 +29,12 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    remove: function(req, res) {
-      db.Tan
-        .findById({ _id: req.params.id })
-        .then(dbModel => dbModel.remove())
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-    }
+    //do I need this one?
+    // remove: function(req, res) {
+    //   db.Tan
+    //     .findById({ _id: req.params.id })
+    //     .then(dbModel => dbModel.remove())
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err));
+    // }
   };
