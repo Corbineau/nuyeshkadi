@@ -16,8 +16,7 @@ class Admin extends Component {
         pronunciation: "",
         partOfSpeech: "",
         meaning: "",
-        
-
+        sorters: {},
       }
     };
 
