@@ -5,19 +5,21 @@ const Schema = mongoose.Schema;
 // this will be our data base's data structure 
 const Yesh = new Schema(
   {
-    word: String,
-    pronounciation: String,
-    partOfSpeech: String,
-    meaning: String,
-    sorters: {
-      category: Array,
-      qualities: Array,
-      sort: Array
-    },
-    etymology: {
+    word: {
+      key: Number,
+      partOfSpeech: String,
+      pronounciation: String,
+      meaning: String,
+      sorters: {
+        category: Array,
+        qualities: Array,
+        sort: Array
+      },
+      etymology: {
         source: String,
         relatedWords: Array,
         roots: Array
+      },
     },
     orthography: String
   }
