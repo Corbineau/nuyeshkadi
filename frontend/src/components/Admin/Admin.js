@@ -94,6 +94,7 @@ class Admin extends Component {
             <option value="adverb">adverb</option>
             <option value="article">article</option>
             <option value="pragmatic">pragmatic</option>
+            <option value="pragmatic">preposition</option>
           </select>
           <TextArea 
             value={this.state.meaning}
