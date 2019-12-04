@@ -77,47 +77,6 @@ class Admin extends Component {
 
 
 
-<<<<<<< HEAD
-    render() {
-
-      return (
-        <div id="newForm">
-          <Input 
-            value={this.state.word}
-            onChange={this.handleStateChange}
-            name="newWord.word"
-            placeholder="enter a new word"
-          />
-          <Input 
-            value={this.state.pronunciation}
-            onChange={this.handleStateChange}
-            name="newWord.pronunciation"
-            placeholder="enter pronunciation"
-          />
-          <select 
-            value={this.state.partOfSpeech}
-            onChange={this.handleStateChange}
-            name="newWord.partOfSpeech"
-            placeholder="select Part of Speech"
-          >
-            <option value="noun">noun</option>
-            <option value="verb">verb</option>
-            <option value="adjective">adjective</option>
-            <option value="conjunction">conjunction</option>
-            <option value="pronoun">pronoun</option>
-            <option value="adverb">adverb</option>
-            <option value="article">article</option>
-            <option value="pragmatic">pragmatic</option>
-            <option value="pragmatic">preposition</option>
-          </select>
-          <TextArea 
-            value={this.state.meaning}
-            onChange={this.handleStateChange}
-            name="newWord.meaning"
-            placeholder="enter definition"
-          />
-          <FormBtn
-=======
   render() {
 
     return (
@@ -148,6 +107,7 @@ class Admin extends Component {
           <option value="adverb">adverb</option>
           <option value="article">article</option>
           <option value="pragmatic">pragmatic</option>
+          <option value="pragmatic">preposition</option>
         </select>
         <TextArea
           value={this.state.meaning}
@@ -156,7 +116,6 @@ class Admin extends Component {
           placeholder="enter definition"
         />
         <FormBtn
->>>>>>> 030848b3a6ddcc9c841b6c2f463d6f063c3bfe8c
           onClick={this.handleWordSubmit}
           value="submit"
         >
