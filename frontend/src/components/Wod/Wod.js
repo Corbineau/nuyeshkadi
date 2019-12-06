@@ -26,13 +26,10 @@ class Wod extends Component {
 
     getNewWord = function() {
         const runJob = schedule.scheduleJob('0 0 */1 * *', () => {
-            
+            //find a word that isn't already in Tan, put it in Tan associated with today's date
         });     }
 
     render() {
-
-
-
         return (
             <div className="content">
                 <div id="word">

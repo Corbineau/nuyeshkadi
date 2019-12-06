@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 // this will be our data base's data structure 
 const Yesh = new Schema(
   {
-    word: [{
+    word: String,
+    meanings: [
+      {
       key: Number,
       partOfSpeech: String,
       pronounciation: String,
@@ -19,7 +21,7 @@ const Yesh = new Schema(
         source: String,
         relatedWords: Array,
         roots: Array
-      },
+      }
     }],
     orthography: String
   }
