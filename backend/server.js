@@ -12,7 +12,14 @@ const router = express.Router();
 
 // this is our MongoDB database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-flexible-35753";
-mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    })
+    .then(() => console.log('DB Connection Ok!'))
+    .catch(err => {
+    console.log(`DB Connection Error: ${err.message}`);
+    });
 
 
 let db = mongoose.connection;
