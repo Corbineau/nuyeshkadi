@@ -1,8 +1,12 @@
 import React from "react";
-import { Input, TextArea} from './Form'
+import { Formik } from "formik";
 import './Admin.css';
 
 function Defs({}) {
+    <Formik
+        initialValues={{}}
+    
+    ></Formik> 
     return (<div classname="definition">
         <Input
             value={this.state.pronunciation}
