@@ -113,12 +113,7 @@ class Admin extends Component {
           name="newWord.word"
           placeholder="enter a new word"
         />
-        <FormBtn
-          onClick={this.addAdditionalDef}
-          value=""
-          >
-          Add a new definition
-        </FormBtn>
+        
         <Input
           value={this.state.pronunciation}
           onChange={this.handleStateChange}
@@ -139,7 +134,7 @@ class Admin extends Component {
           <option value="adverb">adverb</option>
           <option value="article">article</option>
           <option value="pragmatic">pragmatic</option>
-          <option value="pragmatic">preposition</option>
+          <option value="preposition">preposition</option>
         </select>
         <TextArea
           value={this.state.meaning}
@@ -166,6 +161,12 @@ class Admin extends Component {
           value={this.state.searchTerm}
           placeholder="search for a word here"
         />
+        <FormBtn
+          onClick={this.addAdditionalDef}
+          value=""
+          >
+          Add a new definition
+        </FormBtn>
         <FormBtn
           onClick={this.handleSearchSubmit}
           value="submit"
