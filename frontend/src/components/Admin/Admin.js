@@ -12,8 +12,10 @@ class Admin extends Component {
       searchTerm: ""
     },
     newWord: {
-      word: [
+      word: "",
+      definitions: [
         {
+          key: 0,
           pronunciation: "",
           partOfSpeech: "",
           meaning: "",
@@ -30,6 +32,20 @@ class Admin extends Component {
         }
       ],
       orthography: ""
+    },
+    newDef: {
+      partOfSpeech: "",
+          meaning: "",
+          sorters: {
+            category: [],
+            qualities: [],
+            sort: []
+          },
+          etymology: {
+            source: "",
+            relatedWords: [],
+            roots: []
+          },
     }
   };
 
@@ -75,6 +91,16 @@ class Admin extends Component {
 
   }
 
+  addAdditionalDef = () => {
+    //respond to a buttonclick to add a new definition form element... this is gonna have to be a new component ><
+    //set/incriment the key value on the click
+    //take the form elements for the new definition and push it to the definitions array in the current word
+    let newDef = this.state.newDef;
+    this.state.newWord.definitions.push(this.state.newDef);
+
+
+  }
+
 
 
   render() {
@@ -87,6 +113,12 @@ class Admin extends Component {
           name="newWord.word"
           placeholder="enter a new word"
         />
+        <FormBtn
+          onClick={this.addAdditionalDef}
+          value=""
+          >
+          Add a new definition
+        </FormBtn>
         <Input
           value={this.state.pronunciation}
           onChange={this.handleStateChange}

@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const Yesh = new Schema(
   {
     word: String,
-    meanings: [
+    definitions: [
       {
       key: Number,
       partOfSpeech: String,
