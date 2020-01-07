@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Wod.css';
 import API from '../../utils/API';
 const schedule = require('node-schedule');
+const runJob = schedule.scheduleJob('0 0 */1 * *', Wod.getNewWord());
 
 class Wod extends Component {
     state = {
@@ -20,14 +21,14 @@ class Wod extends Component {
     */
 
     componentDidMount() {
-
+        //update the state to today's date; this value should match whatever is stored in Tan, since it's gonna be a search term
+        this.setState
         API.getTan(this.state.today)
         //pull the word associated with the day from the tan model. This should probably be a whole doc.
     }
 
     
     getNewWord = function() {
-        const runJob = schedule.scheduleJob('0 0 */1 * *', () => {
             API.getRandomWord()
             .then(rand => {
                 const random = rand;
@@ -42,7 +43,7 @@ class Wod extends Component {
                 })
             })
             //find a word that isn't already in Tan, put it in Tan associated with today's date
-        });     } 
+        };     
 
     render() {
         return (
