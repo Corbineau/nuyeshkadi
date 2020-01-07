@@ -5,10 +5,14 @@ export default {
   getWords: function() {
     return axios.get("/api/yesh");
   },
+  getRandomWord: function(){
+    return axios.get("api/yesh/random");
+  },
+  //search for all results by word
   getWord: function(word) {
     return axios.get(`/api/yesh/${word}`);
   },
-  // Get all words that match the full range of sorter terms
+  // Get all words that match the full range of sorter terms. Needs updating badly.
   wordSearch: function(type, term) {
     return axios.get(`/api/yesh?type=${type}term=${term}`);
   },
