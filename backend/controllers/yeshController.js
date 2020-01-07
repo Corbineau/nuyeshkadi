@@ -16,6 +16,12 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
+    findByWord: function(req, res) {
+      db.Yesh
+      .find({word: req.params.word})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+    },
     create: function(req, res) {
       db.Yesh
         .insertOne(req.body)
