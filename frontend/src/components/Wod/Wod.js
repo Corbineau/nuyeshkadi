@@ -28,7 +28,19 @@ class Wod extends Component {
     
     getNewWord = function() {
         const runJob = schedule.scheduleJob('0 0 */1 * *', () => {
-            API.getWord()
+            API.getRandomWord()
+            .then(rand => {
+                const random = rand;
+                API.getWord(random)
+                .then(res => {
+                    if(res) {
+                        console.log("already there, trying again");
+                        runJob();
+                    } else {
+                        console.log(`no match! Saving ${random}`);
+                    }
+                })
+            })
             //find a word that isn't already in Tan, put it in Tan associated with today's date
         });     } 
 
