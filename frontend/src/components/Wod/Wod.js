@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './Wod.css';
 import API from '../../utils/API';
 const schedule = require('node-schedule');
-const runJob = schedule.scheduleJob('0 0 */1 * *', Wod.getNewWord());
+
 
 class Wod extends Component {
     state = {
-        today: "", //state.today should be the real current day in either cron format maybe? dd-mm-yyyy
-        // date: new Date(),
-        thisday: "", //the day that is being displayed (for viewing old words)
+        today: "", //is set when Component mounts.
+        thisday: "", //the day that is being displayed (for viewing old words) -- may not need this
         yesterday: "", // the day before thisday
         nextday: "", // the day after thisday
         tan: {},
@@ -24,39 +23,40 @@ class Wod extends Component {
         let now = new Date();
         //update the state to today's date; this value should match whatever is stored in Tan, since it's gonna be a search term
         this.setState({
-            today: now.toISOString()
-        }).then(() => {
-            API.getTan(this.state.today);
-            console.log(this.state.today);
-            }
-        )}
-        //pull the word associated with the day from the tan model. This should probably be a whole doc.
-    
+            today: now.toISOString(),
+            yesterday: now.getDate() - 1,
+        });
+        API.getTan(this.state.today);
+        console.log(this.state.today);
 
-    
-    getNewWord = function() {
-            API.getRandomWord()
+    }
+    //pull the word associated with the day from the tan model. This should probably be a whole doc.
+
+    runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
+
+    getNewWord = function () {
+        API.getRandomWord()
             .then(rand => {
                 const random = rand;
                 API.getWord(random)
-                .then(res => {
-                    if(res) {
-                        console.log("already there, trying again");
-                        runJob();
-                    } else {
-                        console.log(`no match! Saving ${random}`);
-                    }
-                })
+                    .then(res => {
+                        if (res) {
+                            console.log("already there, trying again");
+                            this.runJob();
+                        } else {
+                            console.log(`no match! Saving ${random}`);
+                        }
+                    })
             })
-            //find a word that isn't already in Tan, put it in Tan associated with today's date
-        };     
+        //find a word that isn't already in Tan, put it in Tan associated with today's date
+    };
 
     render() {
         return (
             <div className="content">
                 <div id="word">
-                    
-                    <div id="showWord"> 
+
+                    <div id="showWord">
                     </div>
                     <span id="pronunciation">
 
