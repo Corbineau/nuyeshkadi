@@ -10,7 +10,11 @@ class Wod extends Component {
         thisday: "", //the day that is being displayed (for viewing old words) -- may not need this
         yesterday: "", // the day before thisday
         nextday: "", // the day after thisday
-        tan: {},
+        tan: {
+            date: "",
+            word: {},
+            rendering: ""
+        },
     }
 
     /* FUNCTIONALITY
@@ -22,12 +26,16 @@ class Wod extends Component {
     componentDidMount() {
         let now = new Date();
         //update the state to today's date; this value should match whatever is stored in Tan, since it's gonna be a search term
+        //will still need to add handling for other date routes; probably an if statement or a case. Eh.
         this.setState({
             today: now.toISOString(),
             yesterday: now.getDate() - 1,
+            tomorrow: now.getDate() +1
+        }, () => {
+            API.getTan(this.state.today);
+            console.log(this.state.today);
         });
-        API.getTan(this.state.today);
-        console.log(this.state.today);
+       
 
     }
     //pull the word associated with the day from the tan model. This should probably be a whole doc.
@@ -45,6 +53,12 @@ class Wod extends Component {
                             this.runJob();
                         } else {
                             console.log(`no match! Saving ${random}`);
+                            this.setState({
+                                tan : {
+                                    word: res,
+                                    rendering: res.orthography
+                                }
+                            })
                         }
                     })
             })
@@ -57,17 +71,24 @@ class Wod extends Component {
                 <div id="word">
 
                     <div id="showWord">
+                        <p>
+                        {}
+                        </p>
                     </div>
                     <span id="pronunciation">
-
+                        <p>
+                            {}
+                        </p>
                     </span>
                     <div id="meaning">
                         <p>
-                            meaning: <span id="wordMeaning"></span>
+        meaning: <span id="wordMeanings"> </span>
                         </p>
                     </div>
-                    <div id="orthography">
-
+                    <div id="orthography" className="orthography">
+                        <p>
+                            {this.state.tan.rendering || "min!"}
+                        </p>
                     </div>
                 </div>
 

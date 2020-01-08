@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 const express = require('express');
-var cors = require('cors');
+// var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
 
 const API_PORT = process.env.API_PORT || 3001;
 const app = express();
-app.use(cors());
+// app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
@@ -43,8 +43,9 @@ if (process.env.NODE_ENV === "production") {
 
 
 
-// append /api for our http requests
-app.use('/api', router);
+// append /api for our http requests -- may not need because of middleware?
+// app.use('/api', router);
+app.use(router)
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
