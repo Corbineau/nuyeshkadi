@@ -5,8 +5,15 @@ export default {
   getWords: function() {
     return axios.get("/api/yesh");
   },
-  // Get all words that match terms
-  getWord: function(type, term) {
+  getRandomWord: function(){
+    return axios.get("api/yesh/random");
+  },
+  //search for all results by word
+  getWord: function(word) {
+    return axios.get(`/api/yesh/${word}`);
+  },
+  // Get all words that match the full range of sorter terms. Needs updating badly.
+  wordSearch: function(type, term) {
     return axios.get(`/api/yesh?type=${type}term=${term}`);
   },
   // Deletes the word with the given id
@@ -17,6 +24,7 @@ export default {
   saveWord: function(wordData) {
     return axios.post(`/api/yesh/`);
   },
+  //add an updater for the Yesh DB here, so more meanings can be added or whatever.
   getTan: function(date) {
       return axios.get(`/api/tan/${date}`)
   }

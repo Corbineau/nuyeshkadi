@@ -11,7 +11,8 @@ app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-flexible-35753";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Lexicon";
+// "mongodb://localhost/mongolab-flexible-35753";
 mongoose.connect(MONGODB_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,

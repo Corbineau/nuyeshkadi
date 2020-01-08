@@ -23,7 +23,8 @@ const Yesh = new Schema(
         roots: Array
       }
     }],
-    orthography: String
+    orthography: String,
+    notes: String
   }
 );
 
