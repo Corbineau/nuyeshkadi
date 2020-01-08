@@ -21,11 +21,17 @@ class Wod extends Component {
     */
 
     componentDidMount() {
+        let now = new Date();
         //update the state to today's date; this value should match whatever is stored in Tan, since it's gonna be a search term
-        this.setState
-        API.getTan(this.state.today)
+        this.setState({
+            today: now.toISOString()
+        }).then(() => {
+            API.getTan(this.state.today);
+            console.log(this.state.today);
+            }
+        )}
         //pull the word associated with the day from the tan model. This should probably be a whole doc.
-    }
+    
 
     
     getNewWord = function() {
