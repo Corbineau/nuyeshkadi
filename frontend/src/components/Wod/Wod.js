@@ -92,7 +92,7 @@ class Wod extends Component {
                     </span>
                     <div id="meaning">
                         <p>
-        meaning: <span id="wordMeanings"> </span>
+        definitions: <span id="wordMeanings"> </span>
                         </p>
                     </div>
                     <div id="orthography" className="orthography">
