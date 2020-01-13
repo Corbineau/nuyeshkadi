@@ -101,7 +101,7 @@ class Admin extends Component {
 
   }
 
-
+//Ok, so the problem below is that I need the actual form piece for the defs to re-pop if I click add another def, so... I need a new component for the definitions form. 
 
   render() {
 

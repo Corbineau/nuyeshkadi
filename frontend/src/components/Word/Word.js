@@ -2,7 +2,7 @@ import React from "react";
 import "./Word.css"
 
 //Actually, I think I want the date and the word outside of this component, so that I can reuse it in different contexts? IDK.
-//need to be able to add multiple meanings, each with it's own part of speech, so include all those components here
+//need to be able to add multiple meanings, each with it's own part of speech, so include all those components here, and map the defs. 
 
 function Word({ word, meanings, orthography}) {
     return (
