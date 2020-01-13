@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Wod.css';
 import API from '../../utils/API';
 const schedule = require('node-schedule');
-const loc = //this should add the value of the route;
+const loc = window.location.pathname; //this should add the value of the route;
 
 
 class Wod extends Component {
@@ -25,19 +25,29 @@ class Wod extends Component {
     */
 
     componentDidMount() {
-        //put all of the below in an if statement based on the route
-        let now = new Date();
+        if(loc === "/") {
+            let now = new Date();
         this.setState({
+ 
             today: now.toISOString(),
             yesterday: now.getDate() - 1,
-            tomorrow: now.getDate() +1
+            tomorrow: now.getDate() +1 //for the current day, this needs to go to a "come back tomorrow" kind of deal.
         }, () => {
-            API.getTan(this.state.today);
+            API.getTan(this.state.today) //add error handling here;
             console.log(this.state.today);
         });
-       
+        } else {
+            let now = loc;
+            this.setState({
+                //need to figure out how to get this into an ISO date, since I don't want the actual route to be ISO. YUCK.
+                today: now,
+                yesterday: "",
+                tomorrow: ""}, () => {
+                    API.getTan(this.state.today);
+                    console.log(this.state.today);
+                });
+            }}
 
-    }
     //pull the word associated with the day from the tan model. This should probably be a whole doc.
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
