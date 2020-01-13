@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Wod.css';
 import API from '../../utils/API';
 const schedule = require('node-schedule');
+const loc = //this should add the value of the route;
 
 
 class Wod extends Component {
@@ -24,9 +25,8 @@ class Wod extends Component {
     */
 
     componentDidMount() {
+        //put all of the below in an if statement based on the route
         let now = new Date();
-        //update the state to today's date; this value should match whatever is stored in Tan, since it's gonna be a search term
-        //will still need to add handling for other date routes; probably an if statement or a case. Eh.
         this.setState({
             today: now.toISOString(),
             yesterday: now.getDate() - 1,
