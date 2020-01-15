@@ -38,6 +38,7 @@ class Wod extends Component {
         });
         } else {
             let now = loc;
+            console.log(loc);
             this.setState({
                 //need to figure out how to get this into an ISO date, since I don't want the actual route to be ISO. YUCK.
                 today: now,
@@ -78,6 +79,9 @@ class Wod extends Component {
     render() {
         return (
             <div className="content">
+                <div id="dates">
+    <span>{this.state.yesterday} {this.state.today} {this.state.nextday}</span>
+                </div>
                 <div id="word">
 
                     <div id="showWord">
