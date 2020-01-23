@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './Wod.css';
 import Word from './Word';
+const moment = require('moment');
 const schedule = require('node-schedule');
 const loc = window.location.pathname; //this should add the value of the route;
 
+
+moment().format();
 
 class Wod extends Component {
     state = {
@@ -24,11 +27,13 @@ class Wod extends Component {
     * render the word. 
     */
 
+   
+
     componentDidMount() {
         if(loc === "/") {
             let now = new Date();
         this.setState({
- 
+            //TODO: update all of this to use moment.js
             today: now.toISOString(),
             yesterday: now.getDate() - 1,
             tomorrow: now.getDate() +1 //for the current day, this needs to go to a "come back tomorrow" kind of deal.
