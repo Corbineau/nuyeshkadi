@@ -45,7 +45,7 @@ class Wod extends Component {
             let now = loc;
             console.log(loc);
             this.setState({
-                //need to figure out how to get this into an ISO date, since I don't want the actual route to be ISO. YUCK.
+                //need to figure out how to get this into an ISO date, since I don't want the actual route to be ISO. YUCK. So yeah. Moment.
                 today: now,
                 yesterday: "",
                 tomorrow: ""}, () => {
