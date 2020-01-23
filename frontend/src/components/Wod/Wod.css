@@ -17,6 +17,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#defs {
+    padding: 1rem;
+}
+
 #showWord {
     font-size: 1rem;
     font-family: fantasy;
