@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Wod.css';
-import API from '../../utils/API';
 const schedule = require('node-schedule');
 const loc = window.location.pathname; //this should add the value of the route;
 
