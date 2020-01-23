@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Wod.css';
+import Word from './Word';
 const schedule = require('node-schedule');
 const loc = window.location.pathname; //this should add the value of the route;
 
@@ -82,7 +83,9 @@ class Wod extends Component {
     <span>{this.state.yesterday} {this.state.today} {this.state.nextday}</span>
                 </div>
                 <div id="word">
-
+                    <Word>
+                        
+                    </Word>
                     <div id="showWord">
                         <p>
                         {}
