@@ -4,7 +4,7 @@ import Word from '../Word/Word';
 import API from '../../utils/API'
 const moment = require('moment');
 const schedule = require('node-schedule');
-const loc = window.location.pathname; //this should add the value of the route;
+const loc = window.location.pathname.split("/"); //this should add the value of the route;
 
 
 moment().format();
@@ -45,15 +45,14 @@ class Wod extends Component {
             console.log(this.state.today);
         });
         } else {
-            let now = loc;
+            let now = moment(loc, "MM-DD-YYYY");
             console.log(loc);
             this.setState({
-                //need to figure out how to get this into an ISO date, since I don't want the actual route to be ISO. YUCK. So yeah. Moment.
-                today: now,
-                yesterday: "",
-                tomorrow: ""}, () => {
-                    API.getTan(this.state.today);
-                    console.log(this.state.today);
+                today: now.format("dddd, MMMM Do YYYY"),
+                yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY"),
+                tomorrow: now.clone().add(1, 'd').format("dddd, MMMM Do YYYY")}, () => {
+                    API.getTan(now); //add a try/catch here
+                    console.log(now);
                 });
             }}
 
@@ -88,7 +87,7 @@ class Wod extends Component {
         return (
             <div className="content">
                 <div id="dates">
-    <span>{this.state.yesterday} | {this.state.today} | {this.state.nextday}</span>
+    <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
                 </div>
                 <div id="word">
                     <Word>
