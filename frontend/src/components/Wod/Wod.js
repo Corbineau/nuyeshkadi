@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Wod.css';
-import Word from './Word';
+import Word from '../Word/Word';
+import API from '../../utils/API'
 const moment = require('moment');
 const schedule = require('node-schedule');
 const loc = window.location.pathname; //this should add the value of the route;
@@ -27,14 +28,17 @@ class Wod extends Component {
     * render the word. 
     */
 
-   
+//    res.data.forEach(review => {
+//     let newDate = review.date.split("T")[0];
+//       review.date = newDate;
+//     });
 
     componentDidMount() {
         if(loc === "/") {
             let now = new Date();
         this.setState({
             //TODO: update all of this to use moment.js
-            today: now.toISOString(),
+            today: now.toISOString().split("T")[0],
             yesterday: now.getDate() - 1,
             tomorrow: now.getDate() +1 //for the current day, this needs to go to a "come back tomorrow" kind of deal.
         }, () => {
@@ -108,7 +112,7 @@ class Wod extends Component {
                     </div>
                     <div id="orthography" className="orthography">
                         <p>
-                            {this.state.tan.rendering || "min!"}
+                            {this.state.tan.rendering || "min"}
                         </p>
                     </div>
                 </div>

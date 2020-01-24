@@ -11,10 +11,10 @@ function Word({ word, meanings, orthography}) {
                 <strong>{word}</strong>
             </p>
             <div className="types">
-                {pronunciation} {partOfSpeech}
+                {/* {pronunciation} {partOfSpeech} */}
             </div>
             <div className="definitions">
-                {meanings.defs.map()}
+                {/* {meanings.defs.map()} */}
             </div>
             <div className="orthography">
                 {orthography}
