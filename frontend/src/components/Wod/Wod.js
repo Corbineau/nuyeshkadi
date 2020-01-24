@@ -12,14 +12,14 @@ moment().format();
 class Wod extends Component {
     state = {
         today: "", //is set when Component mounts.
-        thisday: "", //the day that is being displayed (for viewing old words) -- may not need this
-        yesterday: "", // the day before thisday
-        nextday: "", // the day after thisday
+        yesterday: "", // the day before today
+        tomorrow: "", // the day after today
         tan: {
             date: "",
             word: {},
             rendering: ""
         },
+        tanResult: {}
     }
 
     /* FUNCTIONALITY
@@ -28,42 +28,54 @@ class Wod extends Component {
     * render the word. 
     */
 
-//    res.data.forEach(review => {
-//     let newDate = review.date.split("T")[0];
-//       review.date = newDate;
-//     });
+    //    res.data.forEach(review => {
+    //     let newDate = review.date.split("T")[0];
+    //       review.date = newDate;
+    //     });
 
     componentDidMount() {
         console.log(loc);
-        if(loc === "/") {
-            // let now = moment();
-        this.setState({
-            today: moment().format("dddd, MMMM Do YYYY"),
-            yesterday: this.state.today -1,
-        }, () => {
-            API.getTan(this.state.today) //add error handling here;
-            console.log(this.state.today);
-        });
+        if (loc === "/") {
+            let now = moment().format();
+            this.setState({
+                today: moment().format("dddd, MMMM Do YYYY"),
+                yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
+            }, () => {
+                API.getTan(now.format("MM-DD-YYYY")).then( res => {
+                    this.setState({
+                        tanResult: res.data,
+                    });
+                    console.log(this.state.tan, this.state.tanResult);
+                }
+            )});
         } else {
             let now = moment(loc, "MM-DD-YYYY");
             console.log(loc);
             this.setState({
                 today: now.format("dddd, MMMM Do YYYY"),
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY"),
-                tomorrow: now.clone().add(1, 'd').format("dddd, MMMM Do YYYY")}, () => {
-                    API.getTan(now); //add a try/catch here
-                    console.log(now);
-                });
-            }}
+                tomorrow: now.clone().add(1, 'd').format("dddd, MMMM Do YYYY")
+            }, () => {
+                API.getTan(now).then(res => {
+                    this.setState({
+                        tanResult: res.data
+                    })
+                }); //add a try/catch here
+                console.log(now, this.state.tanResult);
+                
+            });
+        }
+    }
 
     //pull the word associated with the day from the tan model. This should probably be a whole doc.
 
-    runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
+    runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) }; //need to verify this will run even if the component doesn't load. May need to live on the app.
 
     getNewWord = function () {
+        //find a word that isn't already in Tan, put it in Tan associated with today's date
         API.getRandomWord()
             .then(rand => {
-                const random = rand;
+                const random = rand.data;
                 API.getWord(random)
                     .then(res => {
                         if (res) {
@@ -72,30 +84,31 @@ class Wod extends Component {
                         } else {
                             console.log(`no match! Saving ${random}`);
                             this.setState({
-                                tan : {
-                                    word: res,
-                                    rendering: res.orthography
+                                tan: {
+                                    date: moment.format(),
+                                    word: res.data,
+                                    rendering: res.data.orthography
                                 }
+                                //actually need to add this to the tan DB tho.
                             })
                         }
                     })
             })
-        //find a word that isn't already in Tan, put it in Tan associated with today's date
     };
 
     render() {
         return (
             <div className="content">
                 <div id="dates">
-    <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
+                    <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
                 </div>
-                <div id="word">
-                    <Word>
-                        
+                <div id="word" className="renderWord">
+                    {this.state.tanResult<Word>
+
                     </Word>
                     <div id="showWord">
                         <p>
-                        {}
+                            {}
                         </p>
                     </div>
                     <span id="pronunciation">
@@ -105,7 +118,7 @@ class Wod extends Component {
                     </span>
                     <div id="meaning">
                         <p>
-        definitions: <span id="wordMeanings"> </span>
+                            definitions: <span id="wordMeanings"> </span>
                         </p>
                     </div>
                     <div id="orthography" className="orthography">
