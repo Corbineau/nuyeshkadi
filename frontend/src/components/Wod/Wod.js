@@ -103,9 +103,19 @@ class Wod extends Component {
                     <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
                 </div>
                 <div id="word" className="renderWord">
-                    {this.state.tanResult<Word>
+                    <Word
+                        word={this.state.tan.word.word}
+                        rendering={this.state.tan.rendering}
+                        definitions={this.state.tanResult.defintions.map(def => (
+                            <Defs
+                                // add more here.
+                            />
 
-                    </Word>
+                            
+                        ))}
+                    />
+
+                    
                     <div id="showWord">
                         <p>
                             {}
