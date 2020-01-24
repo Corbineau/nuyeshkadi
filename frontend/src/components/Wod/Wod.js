@@ -34,13 +34,12 @@ class Wod extends Component {
 //     });
 
     componentDidMount() {
+        console.log(loc);
         if(loc === "/") {
-            let now = new Date();
+            // let now = moment();
         this.setState({
-            //TODO: update all of this to use moment.js
-            today: now.toISOString().split("T")[0],
-            yesterday: now.getDate() - 1,
-            tomorrow: now.getDate() +1 //for the current day, this needs to go to a "come back tomorrow" kind of deal.
+            today: moment().format("dddd, MMMM Do YYYY"),
+            yesterday: this.state.today -1,
         }, () => {
             API.getTan(this.state.today) //add error handling here;
             console.log(this.state.today);
@@ -89,7 +88,7 @@ class Wod extends Component {
         return (
             <div className="content">
                 <div id="dates">
-    <span>{this.state.yesterday} {this.state.today} {this.state.nextday}</span>
+    <span>{this.state.yesterday} | {this.state.today} | {this.state.nextday}</span>
                 </div>
                 <div id="word">
                     <Word>

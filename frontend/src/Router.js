@@ -13,7 +13,8 @@ class Router extends Component {
             <Route exact path='/' component={Wod}/>
             <Route path='/index' component={Wod}/>
             <Route path='/admin' component={Admin}/>
-            <Route component={Min}/>
+            <Route path='*' component={Wod}/>
+            {/* <Route component={Min}/> */}
           </Switch>
         </div>
       )
