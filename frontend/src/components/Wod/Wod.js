@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Wod.css';
 import Word from '../Word/Word';
-import API from '../../utils/API'
+import Meaning from '../Meaning/Meaning';
+import API from '../../utils/API';
 const moment = require('moment');
 const schedule = require('node-schedule');
 const loc = window.location.pathname.split("/"); //this should add the value of the route;
@@ -18,7 +19,7 @@ class Wod extends Component {
             date: "",
             word: {},
             rendering: ""
-        },
+        }, //this may be overcomplicating things, actually. Let's refactor later tho.
         tanResult: {}
     }
 
@@ -41,13 +42,18 @@ class Wod extends Component {
                 today: moment().format("dddd, MMMM Do YYYY"),
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
             }, () => {
-                API.getTan(now.format("MM-DD-YYYY")).then( res => {
+                API.getTan(now.format("MM-DD-YYYY")).then(res => {
                     this.setState({
                         tanResult: res.data,
+                        tan: {
+                            word: res.data.word,
+                            rendering: res.data.orthography,
+                        }
                     });
                     console.log(this.state.tan, this.state.tanResult);
                 }
-            )});
+                )
+            });
         } else {
             let now = moment(loc, "MM-DD-YYYY");
             console.log(loc);
@@ -62,7 +68,7 @@ class Wod extends Component {
                     })
                 }); //add a try/catch here
                 console.log(now, this.state.tanResult);
-                
+
             });
         }
     }
@@ -104,38 +110,23 @@ class Wod extends Component {
                 </div>
                 <div id="word" className="renderWord">
                     <Word
-                        word={this.state.tan.word.word}
-                        rendering={this.state.tan.rendering}
-                        definitions={this.state.tanResult.defintions.map(def => (
+                        word={this.state.tan.word.word || "elev"}
+                        orthography={this.state.tan.rendering || "elev"}
+                        meanings={"coming soon" || this.state.tanResult.defintions.map(def => (
                             <Meaning
-                                // add more here.
-                            />
-
-                            
-                        ))}
+                                key={def.key || 1}
+                                partOfSpeech={def.partOfSpeech || "noun" }
+                                pronunciation={def.pronunciation || ""}
+                                def={def.meaning || ""}
+                                tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
+                                related={def.etymology.relatedWords} //map
+                                source={def.etymology.source} //map
+                                roots={def.etymology.roots} //map
+                                notes={def.notes}
+                            /> ))}
                     />
 
-                    
-                    <div id="showWord">
-                        <p>
-                            {}
-                        </p>
-                    </div>
-                    <span id="pronunciation">
-                        <p>
-                            {}
-                        </p>
-                    </span>
-                    <div id="meaning">
-                        <p>
-                            definitions: <span id="wordMeanings"> </span>
-                        </p>
-                    </div>
-                    <div id="orthography" className="orthography">
-                        <p>
-                            {this.state.tan.rendering || "min"}
-                        </p>
-                    </div>
+
                 </div>
 
 

@@ -1,4 +1,5 @@
 import React from "react";
+// import Meaning from '../Meaning/Meaning';
 import "./Word.css"
 
 //Actually, I think I want the date and the word outside of this component, so that I can reuse it in different contexts? IDK.
@@ -10,13 +11,10 @@ function Word({ word, meanings, orthography}) {
             <p>
                 <strong>{word}</strong>
             </p>
-            <div className="types">
-                {/* {pronunciation} {partOfSpeech} */}
-            </div>
             <div className="definitions">
-                {/* {meanings.defs.map()} */}
+                {meanings}
             </div>
-            <div className="orthography">
+            <div className="orthography" id="orthography">
                 {orthography}
             </div>
         </div>
