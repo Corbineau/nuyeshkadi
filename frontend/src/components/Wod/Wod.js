@@ -107,7 +107,7 @@ class Wod extends Component {
                         word={this.state.tan.word.word}
                         rendering={this.state.tan.rendering}
                         definitions={this.state.tanResult.defintions.map(def => (
-                            <Defs
+                            <Meaning
                                 // add more here.
                             />
 

@@ -25,7 +25,13 @@ export default {
     return axios.post(`/api/yesh/`);
   },
   //add an updater for the Yesh DB here, so more meanings can be added or whatever.
+
+  //fetches a word for the given date, in MM-DD-YYYY format.
   getTan: function(date) {
       return axios.get(`/api/tan/${date}`)
+  },
+  //adds a new word to the Tan database on a schedule
+  createTan: function(tanData) {
+    return axios.post(`/api/tan/`)
   }
 };
