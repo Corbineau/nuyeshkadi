@@ -13,7 +13,7 @@ router
 router
   .route("/:word")
   .get(Controller.Yesh.findByWord)
-  .delete(Controller.Yesh.remove)
-  .update(Controller.Yesh.update);
+  .post(Controller.Yesh.updateWord)
+  .delete(Controller.Yesh.removeWord);
 
 module.exports = router;

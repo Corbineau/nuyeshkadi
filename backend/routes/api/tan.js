@@ -3,7 +3,7 @@ const Controller = require("../../controllers");
 
 router.route("/")
   .get(Controller.Tan.findToday)
-  .post(Controller.Tan.create);
+  .post(Controller.Tan.createTan);
 
 router
   .route("/:date")

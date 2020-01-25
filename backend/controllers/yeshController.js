@@ -31,19 +31,19 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
     },
-    create: function(req, res) {
+    createWord: function(req, res) {
       db.Yesh
         .insertOne(req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    update: function(req, res) {
+    updateWord: function(req, res) {
       db.Yesh
         .findOneAndUpdate({ _id: req.params.id }, req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    remove: function(req, res) {
+    removeWord: function(req, res) {
       db.Yesh
         .findById({ _id: req.params.id })
         .then(dbModel => dbModel.remove())

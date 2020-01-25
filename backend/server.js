@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 const express = require('express');
-// var cors = require('cors');
+const routes = require("./routes");
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
-
-const API_PORT = process.env.API_PORT || 3001;
 const app = express();
+const API_PORT = process.env.API_PORT || 3001;
+
 // app.use(cors());
-const router = express.Router();
+// const router = express.Router();
 
 // this is our MongoDB database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Lexicon";
@@ -16,13 +16,11 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Lexicon";
 mongoose.connect(MONGODB_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    })
+})
     .then(() => console.log('DB Connection Ok!'))
     .catch(err => {
-    console.log(`DB Connection Error: ${err.message}`);
+        console.log(`DB Connection Error: ${err.message}`);
     });
-
-
 let db = mongoose.connection;
 
 db.once('open', () => console.log('connected to the database'));
@@ -38,14 +36,14 @@ app.use(logger('dev'));
 
 if (process.env.NODE_ENV === "production") {
     // Express will serve up production assets
-    app.use(express.static("build"));
+    // app.use(express.static(path.join(__dirname, "client/build")));
+    app.use(express.static(__dirname + "/client/build"));
 }
-
 
 
 // append /api for our http requests -- may not need because of middleware?
 // app.use('/api', router);
-app.use(router)
+app.use(routes)
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));

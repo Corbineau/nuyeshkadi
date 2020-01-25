@@ -16,14 +16,14 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    create: function(req, res) {
+    createTan: function(req, res) {
         //this is the one that should run on a schedule.
       db.Tan
         .insertOne(req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    update: function(req, res) {
+    updateTan: function(req, res) {
       db.Tan
         .findOneAndUpdate({ _id: req.params.id }, req.body)
         .then(dbModel => res.json(dbModel))
