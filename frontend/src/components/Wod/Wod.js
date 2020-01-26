@@ -5,7 +5,7 @@ import Meaning from '../Meaning/Meaning';
 import API from '../../utils/API';
 const moment = require('moment');
 const schedule = require('node-schedule');
-const loc = window.location.pathname.split("/"); //this should add the value of the route;
+const loc = window.location.pathname; //this should add the value of the route;
 
 
 moment().format();
@@ -37,7 +37,8 @@ class Wod extends Component {
     componentDidMount() {
         console.log(loc);
         if (loc === "/") {
-            let now = moment().format();
+            let now = moment();
+            console.log(now);
             this.setState({
                 today: moment().format("dddd, MMMM Do YYYY"),
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
@@ -55,7 +56,7 @@ class Wod extends Component {
                 )
             });
         } else {
-            let now = moment(loc, "MM-DD-YYYY");
+            let now = moment(loc.split("/"), "MM-DD-YYYY");
             console.log(loc);
             this.setState({
                 today: now.format("dddd, MMMM Do YYYY"),
