@@ -123,7 +123,7 @@ class Wod extends Component {
                                 related={def.etymology.relatedWords} //map
                                 source={def.etymology.source} //map
                                 roots={def.etymology.roots} //map
-                                notes={def.notes}
+                                notes={def.notes} //...map?
                             /> ))}
                     />
 
