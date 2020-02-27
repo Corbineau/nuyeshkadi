@@ -3,7 +3,10 @@
     "date": "2020-01-09T22:55:28+00:00",
     "word": {
       "word": "qet",
-      "Defintions": {}
+      "Defintions": {
+        "meaning": "",
+        "pronunciation": "" 
+      }
     },
     "rendering": "qet"
   }
