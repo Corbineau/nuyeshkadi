@@ -1,13 +1,90 @@
 [
   {
     "date": "2020-01-09T22:55:28+00:00",
-    "word": {
-      "word": "qet",
-      "Defintions": {
-        "meaning": "",
-        "pronunciation": "" 
+    "word": "qet",
+    "meanings": [
+      {
+      "key": 1,
+      "partOfSpeech": "noun", 
+      "pronounciation": "KEHT",
+      "meaning": "responsibility-defenselessness; quality describing the social duty one one has to another person based on your responsibility to them and how defenseless they are. To an adult, a child will have more qet than another adult. Most qet is relative based on caste and rank, but some qet is absolute (children and self, for instance).",
+      "sorters": {
+        "category": ["society"],
+        "qualities": ["1st declension", "gradient"],
+        "sort": ["responsibility"]
+      },
+      "etymology": {
+        "source": "",
+        "relatedWords": ["qetaim", "aiqet", "qetaim nama", "qest", "veshhaqet", "yeliqet", "aiqethhir", "aiqetil", "auneqet", "baihhaqet", "eqet", "folhaqet", "gajzhaqet", "hhaqet", "iemaqet", "kishhaqet", "kiveqt", "maqet", "meqet", "naimeqet", "nemreqet", "nemreqet qera"],
+        "roots": []
       }
-    },
+    }],
     "rendering": "qet"
+  }, 
+  {
+    "date": "2020-01-01T22:55:28+00:00",
+    "word": "qest",
+    "meanings": [
+      {
+      "key": 1,
+      "partOfSpeech": "noun", 
+      "pronounciation": "KEHST",
+      "meaning": "context, particularly, caste-based, social.",
+      "sorters": {
+        "category": ["society"],
+        "qualities": ["1st declension"],
+        "sort": ["context", "social context"]
+      },
+      "etymology": {
+        "source": "",
+        "relatedWords": ["qet", "hhanaqest"],
+        "roots": []
+      }
+    }],
+    "rendering": "qest"
+  },
+  {
+    "date": "2020-01-02T22:55:28+00:00",
+    "word": "hhanaqest",
+    "meanings": [
+      {
+      "key": 1,
+      "partOfSpeech": "verb", 
+      "pronounciation": "hhah nah QEHST",
+      "meaning": "to divorce (to shatter a context). A violent form of parting that destroys the social context of the individual",
+      "sorters": {
+        "category": ["society"],
+        "qualities": ["negative"],
+        "sort": ["divorce"]
+      },
+      "etymology": {
+        "source": "",
+        "relatedWords": ["qest", "hhana"],
+        "roots": []
+      }
+    }],
+    "rendering": "HAnAqest"
+  },
+  {
+    "date": "2020-01-08T22:55:28+00:00",
+    "word": "ve",
+    "meanings": [
+      {
+      "key": 1,
+      "partOfSpeech": "article", 
+      "pronounciation": "VEH",
+      "meaning": "Either an indefinite article when used with first declension nouns (people) or a definite one when used with second declension nouns (things that are not people). So 'veh' is both 'the' and 'a/an'.",
+      "sorters": {
+        "category": ["meta-conversational", "language"],
+        "qualities": [""],
+        "sort": ["the", "an", "a"]
+      },
+      "etymology": {
+        "source": "",
+        "relatedWords": ["qest", "hhana"],
+        "roots": []
+      }
+    }],
+    "rendering": "ve"
   }
 ]
