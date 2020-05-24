@@ -44,18 +44,22 @@ class Wod extends Component {
             }, () => {
                 console.log(this.state);
                 API.getTan(now.format("MM-DD-YYYY")).then(res => {
-                    this.setState({
-                        tanResult: res.data,
-                        tan: {
-                            word: res.data.word,
-                            rendering: res.data.orthography,
-                        }
-                    });
-                    console.log(this.state.tan, this.state.tanResult);
-                }
-                )}
-                
-            )} else {
+                    if (res) {
+                        this.setState({
+                            tanResult: res.data,
+                            tan: {
+                                word: res.data.word,
+                                rendering: res.data.orthography,
+                            }
+                        });
+                        console.log(this.state.tan, this.state.tanResult);
+                    } else {
+                        this.getNewWord();
+                        console.log(this.state.tan, this.state.tanResult);
+                    }
+                })
+            })
+        } else if(this.validatedate(loc)) { 
             let now = moment(loc.split("/"), "MM-DD-YYYY");
             console.log(loc);
             this.setState({
@@ -68,20 +72,51 @@ class Wod extends Component {
                         tanResult: res.data
                     })
                 });
-                // .try(console.log(now, this.state.tanResult))
-                // .catch(err => {
-                //     console.log(err);
-                //     console.log(this.state);
-                // }); 
-                
-
             });
+        } else {
+            // loc.split("/");
+            let now = moment();
+            this.setState({
+                today: moment().format("dddd, MMMM Do YYYY"),
+                yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
+            }, () => {
+                console.log(this.state);
+                API.getTan(now.format("MM-DD-YYYY")).then(res => {
+                    if (res) {
+                        this.setState({
+                            tanResult: res.data,
+                            tan: {
+                                word: res.data.word,
+                                rendering: res.data.orthography,
+                            }
+                        });
+                        console.log(this.state.tan, this.state.tanResult);
+                    } else {
+                        this.getNewWord();
+                        console.log(this.state.tan, this.state.tanResult);
+                    }
+
+                }
+                )
+            }
+
+            )
+            
         }
+    } 
+
+    validatedate = function (inputText) {
+        const dateformat = new RegExp(/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/, 'g');
+        // Match the date format through regular expression
+        if (inputText.match(dateformat)) { 
+            return true;
+        };
     }
 
     //pull the word associated with the day from the tan model. This should probably be a whole doc.
 
-    runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) }; //need to verify this will run even if the component doesn't load. May need to live on the app.
+    runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
+    //need to verify this will run even if the component doesn't load. May need to live on the app.
 
     getNewWord = function () {
         //find a word that isn't already in Tan, put it in Tan associated with today's date
@@ -118,18 +153,18 @@ class Wod extends Component {
                     <Word
                         word={this.state.tan.word.word || "elev"}
                         orthography={this.state.tan.rendering || "elev"}
-                        // meanings={this.state.tanResult.defintions.map(def => (
-                        //     <Meaning
-                        //         key={def.key || 1}
-                        //         partOfSpeech={def.partOfSpeech || "noun" }
-                        //         pronunciation={def.pronunciation || ""}
-                        //         def={def.meaning || ""}
-                        //         tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
-                        //         related={def.etymology.relatedWords} //map
-                        //         source={def.etymology.source} //map
-                        //         roots={def.etymology.roots} //map
-                        //         notes={def.notes} //...map?
-                        //     /> ))}
+                    // meanings={this.state.tanResult.defintions.map(def => (
+                    //     <Meaning
+                    //         key={def.key || 1}
+                    //         partOfSpeech={def.partOfSpeech || "noun" }
+                    //         pronunciation={def.pronunciation || ""}
+                    //         def={def.meaning || ""}
+                    //         tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
+                    //         related={def.etymology.relatedWords} //map
+                    //         source={def.etymology.source} //map
+                    //         roots={def.etymology.roots} //map
+                    //         notes={def.notes} //...map?
+                    //     /> ))}
                     />
 
 
