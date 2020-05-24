@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 // This is the schema for the word of the day. 
 const TanSchema = new Schema(
   {
-    // Date should be unique, and mm/dd/yyyy format.
+    // Date should be unique, and mm-dd-yyyy format, as it will also serve as the ID.
     date: Date,
     //word object pulled from Yesh model
     word: Object,

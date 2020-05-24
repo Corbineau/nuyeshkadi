@@ -29,6 +29,9 @@ function Defs({}) {
             <option value="article">article</option>
             <option value="pragmatic">pragmatic</option>
             <option value="preposition">preposition</option>
+            <option value="affix">affix</option>
+            <option value="infix">infix</option>
+            <option value="suffix">suffix</option>
         </select>
         <TextArea
             value={this.state.meaning}

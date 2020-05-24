@@ -1,7 +1,7 @@
 import React from "react";
  
 
-function Meaning({key, partOfSpeech, pronunciation, def, tags, related, source, roots, notes}) {
+function Meaning({key, partOfSpeech, pronunciation, def, tags, related, source, roots, morphemes, notes}) {
     return (
         <div className="definition">
             <span id="pronunciation">"[{pronunciation}]"</span> <span id="wordMeanings"> {key}. <em>{partOfSpeech}</em> {def}</span>
@@ -13,6 +13,7 @@ function Meaning({key, partOfSpeech, pronunciation, def, tags, related, source, 
                     related words: <span id="related">{related}</span><br />
                     etymological source: <span id="related">{source}</span><br />
                     root words: <span id="roots">{roots}</span>
+                    {/* there will need to be some logic here to handle the morphemes maybe? */}
                 </p>
                 <p id="notesBox">
                     notes: {notes}

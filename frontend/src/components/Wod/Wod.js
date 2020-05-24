@@ -38,11 +38,11 @@ class Wod extends Component {
         console.log(loc);
         if (loc === "/") {
             let now = moment();
-            console.log(now);
             this.setState({
                 today: moment().format("dddd, MMMM Do YYYY"),
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
             }, () => {
+                console.log(this.state);
                 API.getTan(now.format("MM-DD-YYYY")).then(res => {
                     this.setState({
                         tanResult: res.data,
@@ -53,9 +53,9 @@ class Wod extends Component {
                     });
                     console.log(this.state.tan, this.state.tanResult);
                 }
-                )
-            });
-        } else {
+                )}
+                
+            )} else {
             let now = moment(loc.split("/"), "MM-DD-YYYY");
             console.log(loc);
             this.setState({
@@ -67,8 +67,13 @@ class Wod extends Component {
                     this.setState({
                         tanResult: res.data
                     })
-                }); //add a try/catch here
-                console.log(now, this.state.tanResult);
+                });
+                // .try(console.log(now, this.state.tanResult))
+                // .catch(err => {
+                //     console.log(err);
+                //     console.log(this.state);
+                // }); 
+                
 
             });
         }
@@ -89,15 +94,15 @@ class Wod extends Component {
                             console.log("already there, trying again");
                             this.runJob();
                         } else {
-                            console.log(`no match! Saving ${random}`);
+                            console.log(`no match! Saving ${random}`, res.data);
                             this.setState({
                                 tan: {
                                     date: moment.format(),
                                     word: res.data,
                                     rendering: res.data.orthography
                                 }
-                                //actually need to add this to the tan DB tho.
                             })
+                            API.createTan(res.data)
                         }
                     })
             })
@@ -113,18 +118,18 @@ class Wod extends Component {
                     <Word
                         word={this.state.tan.word.word || "elev"}
                         orthography={this.state.tan.rendering || "elev"}
-                        meanings={"coming soon" || this.state.tanResult.defintions.map(def => (
-                            <Meaning
-                                key={def.key || 1}
-                                partOfSpeech={def.partOfSpeech || "noun" }
-                                pronunciation={def.pronunciation || ""}
-                                def={def.meaning || ""}
-                                tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
-                                related={def.etymology.relatedWords} //map
-                                source={def.etymology.source} //map
-                                roots={def.etymology.roots} //map
-                                notes={def.notes} //...map?
-                            /> ))}
+                        // meanings={this.state.tanResult.defintions.map(def => (
+                        //     <Meaning
+                        //         key={def.key || 1}
+                        //         partOfSpeech={def.partOfSpeech || "noun" }
+                        //         pronunciation={def.pronunciation || ""}
+                        //         def={def.meaning || ""}
+                        //         tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
+                        //         related={def.etymology.relatedWords} //map
+                        //         source={def.etymology.source} //map
+                        //         roots={def.etymology.roots} //map
+                        //         notes={def.notes} //...map?
+                        //     /> ))}
                     />
 
 

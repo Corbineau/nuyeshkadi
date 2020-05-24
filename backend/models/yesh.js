@@ -22,10 +22,17 @@ const Yesh = new Schema(
         relatedWords: Array,
         roots: Array,
         morphs: {
-            verb: String,
-            noun: String,
+            verb: {
+              infinitive: String,
+              regular: Boolean
+            },
+            noun: {
+              plural: String,
+              singular: String,
+              regular: Boolean
+            },
             adjective: String,
-            adverb: String
+            adverb: String,
           }
       }
     }],
