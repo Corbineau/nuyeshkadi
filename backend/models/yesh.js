@@ -9,7 +9,7 @@ const Yesh = new Schema(
     definitions: [
       {
       key: Number,
-      partOfSpeech: String,
+      partOfSpeech: Array,
       pronounciation: String,
       meaning: String,
       sorters: {
