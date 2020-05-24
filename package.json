@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "SET NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base . ",
-    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && npm start\"",
+    "start": "concurrently \"cd backend && nodemon server.js\" \"cd frontend && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "concurrently \"cd frontend && npm install --only=dev && npm install && npm run build\" \"cd backend && npm install\""
   },
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Corbineau/nuyeshkadi#readme",
   "dependencies": {
-    "concurrently": "^4.1.1"
+    "concurrently": "^4.1.2"
   }
 }
