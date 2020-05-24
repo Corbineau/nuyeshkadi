@@ -20,7 +20,13 @@ const Yesh = new Schema(
       etymology: {
         source: String,
         relatedWords: Array,
-        roots: Array
+        roots: Array,
+        morphs: {
+            verb: String,
+            noun: String,
+            adjective: String,
+            adverb: String
+          }
       }
     }],
     orthography: String,
