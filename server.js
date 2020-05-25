@@ -9,9 +9,6 @@ require('dotenv').config();
 const app = express();
 const API_PORT = process.env.API_PORT || 3002;
 
-// app.use(cors());
-// const router = express.Router();
-
 // this is our MongoDB database
 const DBUSER = process.env.DBUSER;
 const DBPASS = process.env.DBPASS;
@@ -44,8 +41,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-// app.use('/api', router);
 app.use(routes)
 
-// launch our backend into a port
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+// start the API server
+app.listen(API_PORT, () => console.log(`Api server now listening on PORT ${API_PORT}`));

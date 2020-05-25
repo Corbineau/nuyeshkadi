@@ -19,7 +19,7 @@ class Wod extends Component {
             date: "",
             word: {},
             rendering: ""
-        }, //this may be overcomplicating things, actually. Let's refactor later tho.
+        }, //this may be overcomplicating things, actually. Let's refactor to have the actual word data pulled from the Yesh model, so I don't have to bother with copying all that data. >_>
         tanResult: {}
     }
 
@@ -43,7 +43,11 @@ class Wod extends Component {
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
             }, () => {
                 console.log(this.state);
-                API.getTan(now.format("MM-DD-YYYY")).then(res => {
+                API.getTan(now.format("MM-DD-YYYY"))
+                .catch(() => 
+                {this.getNewWord();
+                console.log(this.state.tan, this.state.tanResult);
+                }).then(res => {
                     if (res) {
                         this.setState({
                             tanResult: res.data,
@@ -59,60 +63,23 @@ class Wod extends Component {
                     }
                 })
             })
-        } else if(this.validatedate(loc)) { 
+        } else { 
             let now = moment(loc.split("/"), "MM-DD-YYYY");
-            console.log(loc);
+            console.log(loc, now);
             this.setState({
                 today: now.format("dddd, MMMM Do YYYY"),
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY"),
                 tomorrow: now.clone().add(1, 'd').format("dddd, MMMM Do YYYY")
             }, () => {
+                console.log(now);
                 API.getTan(now).then(res => {
                     this.setState({
                         tanResult: res.data
                     })
                 });
             });
-        } else {
-            let now = moment();
-            this.setState({
-                today: moment().format("dddd, MMMM Do YYYY"),
-                yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
-            }, () => {
-                console.log(this.state);
-                API.getTan(now.format("MM-DD-YYYY")).then(res => {
-                    if (res) {
-                        this.setState({
-                            tanResult: res.data,
-                            tan: {
-                                word: res.data.word,
-                                rendering: res.data.orthography,
-                            }
-                        });
-                        console.log(this.state.tan, this.state.tanResult);
-                    } else {
-                        this.getNewWord();
-                        console.log(this.state.tan, this.state.tanResult);
-                    }
-
-                }
-                )
-            }
-
-            )
-            
         }
     } 
-
-    validatedate = function (inputText) {
-        const dateformat = new RegExp(/^(0?[1-9]|[12][0-9]|3[01])(0?[1-9]|1[012])\d{4}$/, 'g');
-        // Match the date format through regular expression
-        if (inputText.match(dateformat)) { 
-            return true;
-        };
-    }
-
-    //pull the word associated with the day from the tan model. This should probably be a whole doc.
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
     //need to verify this will run even if the component doesn't load. May need to live on the app.
