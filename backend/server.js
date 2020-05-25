@@ -1,23 +1,25 @@
 const mongoose = require('mongoose');
+const path = require("path");
 const express = require('express');
 const routes = require("./routes");
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
 const app = express();
-const API_PORT = process.env.API_PORT || 3001;
+const API_PORT = process.env.API_PORT || 3002;
 
 // app.use(cors());
 // const router = express.Router();
 
 // this is our MongoDB database
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Lexicon";
-// "mongodb://localhost/mongolab-flexible-35753";
+const DBUSER = process.env.DBUSER;
+const DBPASS = process.env.DBPASS;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Lexicon" || `mongodb:${DBUSER}:${DBPASS}@ds347367.mlab.com:47367/heroku_dwr69vg9`
 mongoose.connect(MONGODB_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
-    .then(() => console.log('DB Connection Ok!'))
+    .then(() => console.log(`DB Connection Ok! at ${MONGODB_URI}`))
     .catch(err => {
         console.log(`DB Connection Error: ${err.message}`);
     });
@@ -41,7 +43,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-// append /api for our http requests -- may not need because of middleware?
+
 // app.use('/api', router);
 app.use(routes)
 

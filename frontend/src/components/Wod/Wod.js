@@ -74,7 +74,6 @@ class Wod extends Component {
                 });
             });
         } else {
-            // loc.split("/");
             let now = moment();
             this.setState({
                 today: moment().format("dddd, MMMM Do YYYY"),
@@ -106,7 +105,7 @@ class Wod extends Component {
     } 
 
     validatedate = function (inputText) {
-        const dateformat = new RegExp(/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/, 'g');
+        const dateformat = new RegExp(/^(0?[1-9]|[12][0-9]|3[01])(0?[1-9]|1[012])\d{4}$/, 'g');
         // Match the date format through regular expression
         if (inputText.match(dateformat)) { 
             return true;
@@ -153,7 +152,7 @@ class Wod extends Component {
                 <div id="dates">
                     <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
                 </div>
-                
+
                 <div id="word" className="renderWord">
                     <Word
                         orthography={this.state.tan.rendering || "elev"}

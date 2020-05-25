@@ -3,7 +3,7 @@ const router = require("express").Router();
 const tanRoutes = require("./tan");
 const yeshRoutes = require("./yesh");
 
-// Coffee Routes
+// Main Routes
 router.use("/tan", tanRoutes);
 router.use("/yesh", yeshRoutes);
 

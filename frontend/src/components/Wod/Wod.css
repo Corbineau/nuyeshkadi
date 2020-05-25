@@ -12,6 +12,13 @@
     font-size: 1rem;
 }
 
+#title {
+    font-size: 4rem;
+    font-family: 'Tangerine', fantasy;
+    align-content: center;
+    width: 70%;
+}
+
 #word {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
