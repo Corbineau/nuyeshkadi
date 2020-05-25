@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Controller = require("../../controllers");
 
 router.route("/")
-  .get(Controller.Tan.findToday)
+  // .get(Controller.Tan.findByDate)
   .post(Controller.Tan.createTan);
 
 router

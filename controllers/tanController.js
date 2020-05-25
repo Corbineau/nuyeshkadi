@@ -1,22 +1,25 @@
 const db = require("../models")
 
 module.exports = {
-    findToday: function(req, res) {
-      console.log("searching for today...");
+  //also may not need this one, since I am sending by date, unless I actually edit to find by today's date, or by the most recent date. Seems much to me. 
+    findAll: function(req, res) {
+      console.log("searching for words of the day...");
       db.Tan
         .find({})
-        .sort({ word: 1 })
+        .sort({ date: 1 })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     findByDate: function(req, res) {
+      console.log("searching for the date...");
       db.Tan
-      //update like, all of this. It's a whole thing.
-        .findById(req.params.id)
+        .find({
+          date: req.params.date})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     createTan: function(req, res) {
+      console.log("adding word of the day...");
         //this is the one that should run on a schedule.
       db.Tan
         .insertOne(req.body)

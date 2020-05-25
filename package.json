@@ -17,7 +17,7 @@
     "url": "git+https://github.com/Corbineau/nuyeshkadi.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kijzuni",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Corbineau/nuyeshkadi/issues"
@@ -28,10 +28,11 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "if-env": "^1.0.4",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "mongoose": "^5.8.4",
     "morgan": "^1.9.1",
     "node-schedule": "^1.3.2"
