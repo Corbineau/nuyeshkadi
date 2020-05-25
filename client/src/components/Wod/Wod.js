@@ -72,7 +72,7 @@ class Wod extends Component {
                 tomorrow: now.clone().add(1, 'd').format("dddd, MMMM Do YYYY")
             }, () => {
                 console.log(now);
-                API.getTan(now).then(res => {
+                API.getTan(loc).then(res => {
                     this.setState({
                         tanResult: res.data
                     })
