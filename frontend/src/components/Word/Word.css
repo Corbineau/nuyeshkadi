@@ -1,3 +1,18 @@
 /* #orthography{
     font-family: ai-naidari;
 } */
+
+.word{
+    display: flex;
+    flex-flow: row, nowrap;
+    align-items: center;
+    font-family: 'Tangerine', fantasy;
+
+}
+
+#yeshi{
+    display: block;
+    align-items: center;
+    size: 2rem;
+    font-family: 'Tangerine', fantasy
+}

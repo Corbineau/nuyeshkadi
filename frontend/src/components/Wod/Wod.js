@@ -146,12 +146,16 @@ class Wod extends Component {
     render() {
         return (
             <div className="content">
+                
+                <div id="title">
+                {this.state.tan.word.word || "elev"}
+                </div>
                 <div id="dates">
                     <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
                 </div>
+                
                 <div id="word" className="renderWord">
                     <Word
-                        word={this.state.tan.word.word || "elev"}
                         orthography={this.state.tan.rendering || "elev"}
                     // meanings={this.state.tanResult.defintions.map(def => (
                     //     <Meaning

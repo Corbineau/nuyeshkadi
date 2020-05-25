@@ -8,8 +8,8 @@ import "./Word.css"
 function Word({ word, meanings, orthography}) {
     return (
         <div className="word">
-            <p>
-                <strong>{word}</strong>
+            <p id="yeshi">
+                {word}
             </p>
             <div className="definitions">
                 {meanings}
