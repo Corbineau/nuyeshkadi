@@ -29,11 +29,6 @@ class Wod extends Component {
     * render the word. 
     */
 
-    //    res.data.forEach(review => {
-    //     let newDate = review.date.split("T")[0];
-    //       review.date = newDate;
-    //     });
-
     componentDidMount() {
         console.log(loc);
         if (loc === "/") {
