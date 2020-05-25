@@ -2,12 +2,15 @@
   "name": "nuyeshkadi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "build": "SET NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base . ",
-    "start": "concurrently \"cd backend && nodemon server.js\" \"cd frontend && npm start\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "concurrently \"cd frontend && npm install --only=dev && npm install && npm run build\" \"cd backend && npm install\""
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,17 @@
     "url": "https://github.com/Corbineau/nuyeshkadi/issues"
   },
   "homepage": "https://github.com/Corbineau/nuyeshkadi#readme",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^1.18.7"
+  },
   "dependencies": {
-    "concurrently": "^4.1.2"
+    "if-env": "^1.0.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.4",
+    "morgan": "^1.9.1",
+    "node-schedule": "^1.3.2"
   }
 }

@@ -1,3 +1,12 @@
+
+# dependencies
 node_modules
+
+# production
+build
+
+# misc
+.DS_Store
+.vscode
 .env
 sampledata.json
