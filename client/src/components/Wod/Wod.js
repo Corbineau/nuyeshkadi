@@ -39,26 +39,36 @@ class Wod extends Component {
             }, () => {
                 console.log(this.state);
                 API.getTan(now.format("MM-DD-YYYY"))
-                .catch(() => 
-                {this.getNewWord();
-                console.log(this.state.tan, this.state.tanResult);
-                }).then(res => {
-                    if (res) {
-                        this.setState({
-                            tanResult: res.data,
-                            tan: {
-                                word: res.data.word,
-                                rendering: res.data.orthography,
-                            }
-                        });
-                        console.log(this.state.tan, this.state.tanResult);
-                    } else {
+                    .catch(() => {
                         this.getNewWord();
                         console.log(this.state.tan, this.state.tanResult);
-                    }
-                })
+                    }).then(res => {
+                        if (res) {
+                            this.setState({
+                                tanResult: res.data,
+                                tan: {
+                                    word: res.data.word,
+                                    rendering: res.data.orthography,
+                                }
+                            });
+                            console.log(this.state.tan, this.state.tanResult);
+                        } else {
+                            this.getNewWord();
+                            console.log(this.state.tan, this.state.tanResult);
+                        }
+                    })
+                    // .catch(err, this.setState({
+                    //     tanResult: {
+                    //         word: "elev",
+
+                    // },
+                    //     tan: {
+                    //         word: res.data.word,
+                    //         rendering: res.data.orthography,
+                    //     }
+                    // }))
             })
-        } else { 
+        } else {
             let now = moment(loc.split("/"), "MM-DD-YYYY");
             console.log(loc, now);
             this.setState({
@@ -74,7 +84,7 @@ class Wod extends Component {
                 });
             });
         }
-    } 
+    }
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
     //need to verify this will run even if the component doesn't load. May need to live on the app.
@@ -107,9 +117,9 @@ class Wod extends Component {
     render() {
         return (
             <div className="content">
-                
+
                 <div id="title">
-                {this.state.tan.word.word || "elev"}
+                    {this.state.tan.word.word || "elev"}
                 </div>
                 <div id="dates">
                     <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
