@@ -10,7 +10,7 @@ const TanSchema = new Schema(
     
     word: {
       yeshi: String, //word string pulled from Yesh model; used for searching Yesh for the proper data.
-      yeshid: String //id of the word, used to update the model only if something changes.
+      yeshId: String //id of the word, used to update the model only if something changes.
     },
     rendering: String
   }

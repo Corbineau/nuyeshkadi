@@ -83,7 +83,7 @@ class Wod extends Component {
                     }))
             })
             
-    }
+    };
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
     //need to verify this will run even if the component doesn't load. May need to live on the app.
@@ -93,16 +93,17 @@ class Wod extends Component {
         API.getWord(yeshi).then(res => {
             this.setState({
 
+
             })
         })
-    }
+    };
 
     getNewWord = function () {
         //find a word that isn't already in Tan, put it in Tan associated with today's date
         API.getRandomWord()
             .then(rand => {
                 const random = rand.data;
-                API.getWord(random)
+                API.getToday(random.word)
                     .then(res => {
                         if (res) {
                             console.log("already there, trying again");

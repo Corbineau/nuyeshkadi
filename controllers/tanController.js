@@ -28,7 +28,7 @@ module.exports = {
     },
     updateTan: function(req, res) {
       db.Tan
-        .findOneAndUpdate({ _id: req.params.id }, req.body)
+        .findOneAndUpdate({ yeshId: req.params.yeshId }, req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

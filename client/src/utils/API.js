@@ -30,12 +30,16 @@ export default {
   getTan: function (date) {
     return axios.get(`/api/tan/${date}`);
   },
-  //fetches today's word
-  getToday: function () {
-    return axios.get(`/api/tan/`);
+  //searches Tan to see if there's a word match
+  getToday: function (yeshi) {
+    return axios.get(`/api/tan/${yeshi}`);
   },
   //adds a new word to the Tan database on a schedule
   createTan: function (tanData) {
     return axios.post(`/api/tan/`, tanData);
+  },
+  //updates Tan if there are changes to a word that exists already, to be used programmatically
+  updateTan: function(newData) {
+    return axios.put(`/api/tan`, newData);
   }
 };
