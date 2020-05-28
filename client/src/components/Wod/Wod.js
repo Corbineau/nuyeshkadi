@@ -67,11 +67,14 @@ class Wod extends Component {
                 yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
             }, () => {
                 console.log(this.state);
-                API.getTan(now.format("MM-DD-YYYY"))
+                let day = now.format("MM-DD-YYYY");
+                console.log(day);
+                API.getTan(day) //this is an object, may need to stringify
                     .catch(err => {
                         console.log(this.state.tan, this.state.tanResult, err);
                     }).then(res => {
-                        if (res) {
+                        if (res.data.length > 0) {
+                            console.log(res);
                             this.setState({
                                 tan: {
                                     date: res.data.date || now,
@@ -80,9 +83,10 @@ class Wod extends Component {
                                     rendering: res.data.rendering || "elev",
                                 }
                             });
+                            console.log(res);
                             try {
                                 this.getVetanel(this.state.word);
-                                console.log(this.state);
+                                console.log(this.state.word);
                             } catch (err) {
                                 console.log(err)
                             }
@@ -103,6 +107,7 @@ class Wod extends Component {
     getVetanel = function (yeshi) {
         //pull the word data from the Yesh db, using a find.
         API.getWord(yeshi).then(res => {
+            console.log("searching for "  + yeshi + res);
             this.setState({
                 tan: {
                     word: res.data.word,
@@ -123,8 +128,9 @@ class Wod extends Component {
 
     getNewWord = function () {
         //find a word that isn't already in Tan, put it in Tan associated with today's date
-        API.getRandomWord()
+        API.getRandomWord() // getting a 304 for every fetch. BLEH
             .then(rand => {
+                console.log(rand);
                 const random = rand.data;
                 API.getToday(random.word)
                     .then(res => {
