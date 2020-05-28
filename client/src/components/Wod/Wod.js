@@ -18,8 +18,9 @@ class Wod extends Component {
         tan: {
             date: "",
             word: "",
+            yeshid: "",
             rendering: ""
-        }, //this may be overcomplicating things, actually. Let's refactor to have the actual word data pulled from the Yesh model, so I don't have to bother with copying all that data. >_>
+        },
         tanResult: {}
     }
 
@@ -42,8 +43,12 @@ class Wod extends Component {
                 console.log(now);
                 API.getTan(loc).then(res => {
                     this.setState({
-                        tanResult: res.data
-                    })
+                        tan: {
+                            date: res.data.date,
+                            word: res.data.word,
+                            rendering: res.data.rendering,
+                        }
+                    }); // add error handling for old dates.
                 });
             });
         } else {
@@ -62,7 +67,7 @@ class Wod extends Component {
                                 tan: {
                                     date: res.data.date,
                                     word: res.data.word,
-                                    rendering: res.data.orthography,
+                                    rendering: res.data.rendering,
                                 }
                             });
                             console.log(this.state.tan, this.state.tanResult);
@@ -74,16 +79,23 @@ class Wod extends Component {
                     .catch(err, this.setState({
                         tanResult: {
                             word: "elev",
-
-                    },
+                        },
                         tan: {
-                            word: res.data.word,
-                            rendering: res.data.orthography,
+                            word: "elev",
+                            rendering: "elev"
+                        },
+                        tanResult: {
+                            defintions: {
+                                key: 0,
+                                partOfSpeech: "noun",
+                                pronunciation: "[eh LEHV]",
+                                meaning: "Benefit of the Doubt"
+                            }
                         }
                     }))
             })
-            
-    };
+        }
+    }
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
     //need to verify this will run even if the component doesn't load. May need to live on the app.
@@ -92,8 +104,11 @@ class Wod extends Component {
         //pull the word data from the Yesh db, using a find.
         API.getWord(yeshi).then(res => {
             this.setState({
-
-
+                tan: {
+                    word: res.data,
+                    rendering: res.data.orthography
+                },
+                tanResult: res.data
             })
         })
     };
@@ -113,11 +128,11 @@ class Wod extends Component {
                             this.setState({
                                 tan: {
                                     date: moment.format(),
-                                    word: res.data,
+                                    word: res.data.word,
                                     rendering: res.data.orthography
                                 }
                             })
-                            API.createTan(res.data)
+                            API.createTan(this.state.tan);
                         }
                     })
             })
@@ -137,18 +152,18 @@ class Wod extends Component {
                 <div id="word" className="renderWord">
                     <Word
                         orthography={this.state.tan.rendering || "elev"}
-                    // meanings={this.state.tanResult.defintions.map(def => (
-                    //     <Meaning
-                    //         key={def.key || 1}
-                    //         partOfSpeech={def.partOfSpeech || "noun" }
-                    //         pronunciation={def.pronunciation || ""}
-                    //         def={def.meaning || ""}
-                    //         tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
-                    //         related={def.etymology.relatedWords} //map
-                    //         source={def.etymology.source} //map
-                    //         roots={def.etymology.roots} //map
-                    //         notes={def.notes} //...map?
-                    //     /> ))}
+                    meanings={this.state.tanResult.defintions.map(def => (
+                        <Meaning
+                            key={def.key || 1}
+                            partOfSpeech={def.partOfSpeech || "noun" }
+                            pronunciation={def.pronunciation || ""}
+                            def={def.meaning || ""}
+                            tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
+                            related={def.etymology.relatedWords} //map
+                            source={def.etymology.source} //map
+                            roots={def.etymology.roots} //map
+                            notes={def.notes} //...map?
+                        /> ))}
                     />
 
 
