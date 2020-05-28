@@ -8,10 +8,8 @@ const TanSchema = new Schema(
     // Date should be unique, and mm-dd-yyyy format, as it will also serve as the ID.
     date: Date,
     
-    word: {
-      yeshi: String, //word string pulled from Yesh model; used for searching Yesh for the proper data.
-      yeshId: String //id of the word, used to update the model only if something changes.
-    },
+    word: String, //word string pulled from Yesh model; used for searching Yesh for the proper data.
+    yeshId: String, //id of the word, used to update the model only if something changes.
     rendering: String
   }
 );

@@ -32,7 +32,7 @@ class Wod extends Component {
 
     componentDidMount() {
         console.log(loc);
-        if ((loc !== "/") && (Date.parse(loc) != NAN)) {
+        if ((loc !== "/") && (Date.parse(loc) !== isNaN)) {
             let now = moment(loc.split("/"), "MM-DD-YYYY");
             console.log(loc, now);
             this.setState({
@@ -65,36 +65,27 @@ class Wod extends Component {
                         if (res) {
                             this.setState({
                                 tan: {
-                                    date: res.data.date,
-                                    word: res.data.word,
-                                    rendering: res.data.rendering,
+                                    date: res.data.date || now,
+                                    yeshid: res.data.yeshid,
+                                    word: res.data.word || "elev",
+                                    rendering: res.data.rendering || "elev",
                                 }
                             });
+                            try {
+                                this.getVetanel(this.state.word);
+                                console.log(this.state);
+                            } catch (err) {
+                                console.log(err)
+                            }
                             console.log(this.state.tan, this.state.tanResult);
                         } else {
                             this.getNewWord();
                             console.log(this.state.tan, this.state.tanResult);
                         }
                     })
-                    .catch(err, this.setState({
-                        tanResult: {
-                            word: "elev",
-                        },
-                        tan: {
-                            word: "elev",
-                            rendering: "elev"
-                        },
-                        tanResult: {
-                            defintions: {
-                                key: 0,
-                                partOfSpeech: "noun",
-                                pronunciation: "[eh LEHV]",
-                                meaning: "Benefit of the Doubt"
-                            }
-                        }
-                    }))
-            })
+                    
         }
+            )}
     }
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
@@ -105,10 +96,19 @@ class Wod extends Component {
         API.getWord(yeshi).then(res => {
             this.setState({
                 tan: {
-                    word: res.data,
+                    word: res.data.word,
                     rendering: res.data.orthography
                 },
-                tanResult: res.data
+                tanResult: res.data || {
+                    definitions: [
+                        {
+                        key: 0,
+                        partOfSpeech: "noun",
+                        pronunciation: "[eh LEHV]",
+                        meaning: "Benefit of the Doubt"
+                        }
+                    ]
+                }
             })
         })
     };
@@ -143,7 +143,7 @@ class Wod extends Component {
             <div className="content">
 
                 <div id="title">
-                    {this.state.tan.word.word || "elev"}
+                    {this.state.tan.word || "elev"}
                 </div>
                 <div id="dates">
                     <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
@@ -154,15 +154,15 @@ class Wod extends Component {
                         orthography={this.state.tan.rendering || "elev"}
                     meanings={this.state.tanResult.defintions.map(def => (
                         <Meaning
-                            key={def.key || 1}
-                            partOfSpeech={def.partOfSpeech || "noun" }
-                            pronunciation={def.pronunciation || ""}
-                            def={def.meaning || ""}
-                            tags={`${def.sorters.qualities}` || "" } //need to dump array contents here
-                            related={def.etymology.relatedWords} //map
-                            source={def.etymology.source} //map
-                            roots={def.etymology.roots} //map
-                            notes={def.notes} //...map?
+                            key={def.key}
+                            partOfSpeech={def.partOfSpeech }
+                            pronunciation={def.pronunciation }
+                            def={def.meaning }
+                            // tags={`${def.sorters.qualities}`} //need to dump array contents here
+                            // related={def.etymology.relatedWords} //map
+                            // source={def.etymology.source} //map
+                            // roots={def.etymology.roots} //map
+                            // notes={def.notes} //...map?
                         /> ))}
                     />
 
