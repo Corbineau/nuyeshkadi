@@ -17,7 +17,7 @@ class Wod extends Component {
         tomorrow: "", // the day after today
         tan: {
             date: "",
-            word: {},
+            word: "",
             rendering: ""
         }, //this may be overcomplicating things, actually. Let's refactor to have the actual word data pulled from the Yesh model, so I don't have to bother with copying all that data. >_>
         tanResult: {}
@@ -31,44 +31,7 @@ class Wod extends Component {
 
     componentDidMount() {
         console.log(loc);
-        if (loc === "/") {
-            let now = moment();
-            this.setState({
-                today: moment().format("dddd, MMMM Do YYYY"),
-                yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
-            }, () => {
-                console.log(this.state);
-                API.getTan(now.format("MM-DD-YYYY"))
-                    .catch(() => {
-                        this.getNewWord();
-                        console.log(this.state.tan, this.state.tanResult);
-                    }).then(res => {
-                        if (res) {
-                            this.setState({
-                                tanResult: res.data,
-                                tan: {
-                                    word: res.data.word,
-                                    rendering: res.data.orthography,
-                                }
-                            });
-                            console.log(this.state.tan, this.state.tanResult);
-                        } else {
-                            this.getNewWord();
-                            console.log(this.state.tan, this.state.tanResult);
-                        }
-                    })
-                    // .catch(err, this.setState({
-                    //     tanResult: {
-                    //         word: "elev",
-
-                    // },
-                    //     tan: {
-                    //         word: res.data.word,
-                    //         rendering: res.data.orthography,
-                    //     }
-                    // }))
-            })
-        } else {
+        if ((loc !== "/") && (Date.parse(loc) != NAN)) {
             let now = moment(loc.split("/"), "MM-DD-YYYY");
             console.log(loc, now);
             this.setState({
@@ -83,11 +46,56 @@ class Wod extends Component {
                     })
                 });
             });
-        }
+        } else {
+            let now = moment();
+            this.setState({
+                today: now.format("dddd, MMMM Do YYYY"),
+                yesterday: now.clone().subtract(1, 'd').format("dddd, MMMM Do YYYY")
+            }, () => {
+                console.log(this.state);
+                API.getTan(now.format("MM-DD-YYYY"))
+                    .catch(err => {
+                        console.log(this.state.tan, this.state.tanResult, err);
+                    }).then(res => {
+                        if (res) {
+                            this.setState({
+                                tan: {
+                                    date: res.data.date,
+                                    word: res.data.word,
+                                    rendering: res.data.orthography,
+                                }
+                            });
+                            console.log(this.state.tan, this.state.tanResult);
+                        } else {
+                            this.getNewWord();
+                            console.log(this.state.tan, this.state.tanResult);
+                        }
+                    })
+                    .catch(err, this.setState({
+                        tanResult: {
+                            word: "elev",
+
+                    },
+                        tan: {
+                            word: res.data.word,
+                            rendering: res.data.orthography,
+                        }
+                    }))
+            })
+            
     }
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
     //need to verify this will run even if the component doesn't load. May need to live on the app.
+
+    getVetanel = function (yeshi) {
+        //pull the word data from the Yesh db, using a find.
+        API.getWord(yeshi).then(res => {
+            this.setState({
+
+            })
+        })
+    }
 
     getNewWord = function () {
         //find a word that isn't already in Tan, put it in Tan associated with today's date

@@ -6,6 +6,7 @@
     "npm": "6.*"
   },
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",

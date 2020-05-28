@@ -7,7 +7,7 @@ const logger = require('morgan');
 require('dotenv').config();
 
 const app = express();
-const API_PORT = process.env.API_PORT || 3002;
+const API_PORT = process.env.API_PORT || 3001;
 
 // this is our MongoDB database
 const DBUSER = process.env.DBUSER;
@@ -36,7 +36,6 @@ app.use(logger('dev'));
 
 if (process.env.NODE_ENV === "production") {
     // Express will serve up production assets
-    // app.use(express.static(path.join(__dirname, "client/build")));
     app.use(express.static(__dirname + "client/build"));
 }
 
