@@ -21,7 +21,16 @@ class Wod extends Component {
             yeshid: "",
             rendering: ""
         },
-        tanResult: {}
+        tanResult: {
+            definitions: [
+                {
+                key: 0,
+                partOfSpeech: "noun",
+                pronunciation: "[eh LEHV]",
+                meaning: "Benefit of the Doubt"
+                }
+            ]
+        }
     }
 
     /* FUNCTIONALITY
@@ -102,7 +111,6 @@ class Wod extends Component {
                 tanResult: res.data || {
                     definitions: [
                         {
-                        key: 0,
                         partOfSpeech: "noun",
                         pronunciation: "[eh LEHV]",
                         meaning: "Benefit of the Doubt"
@@ -143,7 +151,7 @@ class Wod extends Component {
             <div className="content">
 
                 <div id="title">
-                    {this.state.tan.word || "elev"}
+                    {this.state.tan.word || "Eker"}
                 </div>
                 <div id="dates">
                     <span>{this.state.yesterday} | {this.state.today} | {this.state.tomorrow}</span>
@@ -151,10 +159,9 @@ class Wod extends Component {
 
                 <div id="word" className="renderWord">
                     <Word
-                        orthography={this.state.tan.rendering || "elev"}
-                    meanings={this.state.tanResult.defintions.map(def => (
+                        orthography={this.state.tan.rendering || "eker"}
+                    meanings={this.state.tanResult.definitions ? this.state.tanResult.definitions.map(def => (
                         <Meaning
-                            key={def.key}
                             partOfSpeech={def.partOfSpeech }
                             pronunciation={def.pronunciation }
                             def={def.meaning }
@@ -163,7 +170,7 @@ class Wod extends Component {
                             // source={def.etymology.source} //map
                             // roots={def.etymology.roots} //map
                             // notes={def.notes} //...map?
-                        /> ))}
+                        /> )) : "sigh."}
                     />
 
 
