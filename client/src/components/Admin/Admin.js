@@ -4,6 +4,8 @@ import { Input, TextArea, FormBtn } from './Form'
 import './Admin.css';
 import API from '../../utils/API';
 
+//TODO: add a search for blanks to the API
+
 class Admin extends Component {
   state = {
     data: [],
