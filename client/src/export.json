@@ -412,7 +412,11 @@
         "Part of Speech": "prefix",
         "Meanings": "all; antiquated word for 'all members' or 'gestalt' or 'everything that can be counted as part of this' or 'sum total'. Now unused, except as prefix or infix for words",
         "sorters": {
-            "sort": ["all", "everything", "gestalt"]
+            "sort": [
+                "all",
+                "everything",
+                "gestalt"
+            ]
         }
     },
     {
@@ -421,8 +425,9 @@
         "Part of Speech": "adjective",
         "Meanings": "likely",
         "sorters": {
-            "sort": ["likely"]
-            
+            "sort": [
+                "likely"
+            ]
         }
     },
     {
@@ -667,9 +672,11 @@
         "Part of Speech": "verb",
         "Meanings": "to embody, to make a virtue or divinity flesh",
         "sorters": {
-            "categories": ["religion"]
+            "categories": [
+                "religion"
+            ]
         },
-        "etymology":{
+        "etymology": {
             "related words": [],
             "morphemes": {
                 "noun": "ajzabihh"
@@ -682,9 +689,11 @@
         "Part of Speech": "noun",
         "Meanings": "embodiment",
         "sorters": {
-            "categories": ["religion"]
+            "categories": [
+                "religion"
+            ]
         },
-        "etymology":{
+        "etymology": {
             "related words": [],
             "morphemes": {
                 "verb": "ajzab"
@@ -697,11 +706,18 @@
         "Part of Speech": "noun",
         "Meanings": "touch (specifically, intimate, though not necessarily sexual)",
         "sorters": {
-            "categories": ["body"],
-            "sort": ["touch"]
+            "categories": [
+                "body"
+            ],
+            "sort": [
+                "touch"
+            ]
         },
-        "etymology":{
-            "related words": ["ajzelin", "ajzelviq"]
+        "etymology": {
+            "related words": [
+                "ajzelin",
+                "ajzelviq"
+            ]
         }
     },
     {
@@ -720,10 +736,14 @@
         "Meanings": "touch-lover; beloved; someone allowed to touch your entire body in a non-sexual context at any time and in any situation or company--this word requires it be mutual on each other's parts. This blanket permission is rarely given and always a special intimacy.",
         "sorters": {
             "categories": "types of people",
-            "sort":["touch-lover"]
+            "sort": [
+                "touch-lover"
+            ]
         },
-        "etymology":{
-            "related words": ["ajzel"]
+        "etymology": {
+            "related words": [
+                "ajzel"
+            ]
         }
     },
     {
@@ -1604,7 +1624,7 @@
         "sorters": {
             "categories": "relationships"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "banaje ",
@@ -1614,7 +1634,7 @@
         "sorters": {
             "categories": "relationships"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bash",
@@ -1630,7 +1650,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bashendari ",
@@ -1640,7 +1660,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bat",
@@ -1650,7 +1670,7 @@
         "sorters": {
             "categories": "body",
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bathe ",
@@ -1672,7 +1692,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bauth",
@@ -1682,7 +1702,7 @@
         "sorters": {
             "categories": "flora"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bedevr",
@@ -1692,7 +1712,7 @@
         "sorters": {
             "categories": "clothes"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "befuin",
@@ -1714,7 +1734,7 @@
         "sorters": {
             "categories": "plants"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "beithil",
@@ -1724,7 +1744,7 @@
         "sorters": {
             "categories": "plants"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bej ",
@@ -1740,7 +1760,7 @@
         "sorters": {
             "categories": "communication"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "belevan ",
@@ -1750,7 +1770,7 @@
         "sorters": {
             "categories": "relationships"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "ben",
@@ -1766,7 +1786,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "beqada  ",
@@ -1783,7 +1803,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "berek",
@@ -1805,7 +1825,7 @@
         "sorters": {
             "categories": "objects"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "besh",
@@ -1815,7 +1835,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "beshel",
@@ -1825,7 +1845,7 @@
         "sorters": {
             "categories": "objects"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "beshelauhhe",
@@ -1834,7 +1854,7 @@
         "sorters": {
             "categories": "science"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "beshtalv",
@@ -1850,7 +1870,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "beth",
@@ -1885,7 +1905,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bikun",
@@ -1905,7 +1925,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bip hefa ",
@@ -1915,7 +1935,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bipren",
@@ -1925,7 +1945,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "biret ",
@@ -1935,7 +1955,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bok",
@@ -1945,7 +1965,7 @@
         "sorters": {
             "categories": "act"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bokiboki",
@@ -1955,7 +1975,7 @@
         "sorters": {
             "categories": "act"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bosh",
@@ -1977,7 +1997,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "bri ",
@@ -1993,7 +2013,7 @@
         "sorters": {
             "categories": "science"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "buf ",
@@ -2009,7 +2029,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "chefil",
@@ -2031,7 +2051,7 @@
         "sorters": {
             "categories": "numbers"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "cher ",
@@ -2092,7 +2112,7 @@
         "sorters": {
             "categories": "travel"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dach",
@@ -2116,7 +2136,7 @@
         "sorters": {
             "categories": "games"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "daech",
@@ -2132,7 +2152,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "daelith",
@@ -2156,7 +2176,7 @@
         "sorters": {
             "categories": "plants"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dafyan",
@@ -2166,7 +2186,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dafyanidari",
@@ -2176,7 +2196,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dain",
@@ -2186,7 +2206,7 @@
         "sorters": {
             "categories": "weather"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dajz",
@@ -2205,7 +2225,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dalachret",
@@ -2215,7 +2235,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dalakin",
@@ -2225,7 +2245,7 @@
         "sorters": {
             "categories": "esar"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dalejz",
@@ -2241,7 +2261,7 @@
         "sorters": {
             "categories": "colors"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dan ",
@@ -2263,7 +2283,7 @@
         "sorters": {
             "categories": "time"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dar ",
@@ -2287,7 +2307,7 @@
         "sorters": {
             "categories": "emotions"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dare ",
@@ -2297,7 +2317,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "darelen",
@@ -2306,7 +2326,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "darhefa ",
@@ -2316,7 +2336,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dari-dari ",
@@ -2326,7 +2346,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "daride",
@@ -2344,7 +2364,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "daridin",
@@ -2354,7 +2374,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "darishet",
@@ -2370,7 +2390,7 @@
         "sorters": {
             "categories": "relationships"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "darsha ",
@@ -2380,7 +2400,7 @@
         "sorters": {
             "categories": "time"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "darshad",
@@ -2390,7 +2410,7 @@
         "sorters": {
             "categories": "time"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "daryin",
@@ -2400,7 +2420,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dasha ",
@@ -2410,7 +2430,7 @@
         "sorters": {
             "categories": "travel"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dashalin",
@@ -2439,7 +2459,7 @@
         "sorters": {
             "categories": "communication"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "datyan",
@@ -2455,7 +2475,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "daule",
@@ -2483,7 +2503,7 @@
         "sorters": {
             "categories": "time"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "davalean",
@@ -2518,7 +2538,7 @@
         "sorters": {
             "categories": "communication"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dejza",
@@ -2540,7 +2560,7 @@
         "sorters": {
             "categories": "travel"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "delet ",
@@ -2550,7 +2570,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "den",
@@ -2560,7 +2580,7 @@
         "sorters": {
             "categories": "actions"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "deqet",
@@ -2576,7 +2596,7 @@
         "sorters": {
             "categories": "numbers"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "derauhhejzun",
@@ -2586,7 +2606,7 @@
         "sorters": {
             "categories": "social"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "deren",
@@ -2614,7 +2634,7 @@
         "sorters": {
             "categories": "objects"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "desh",
@@ -2624,7 +2644,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "deshet",
@@ -2654,7 +2674,7 @@
         "sorters": {
             "categories": "time"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dethil",
@@ -2670,7 +2690,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "devre",
@@ -2686,7 +2706,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dibin",
@@ -2696,7 +2716,7 @@
         "sorters": {
             "categories": "communication"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dif ",
@@ -2706,7 +2726,7 @@
         "sorters": {
             "categories": "acts"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dijit",
@@ -2716,7 +2736,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dili",
@@ -2759,7 +2779,7 @@
         "sorters": {
             "categories": "food"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "diqed",
@@ -2769,7 +2789,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "diquqash",
@@ -2784,7 +2804,7 @@
         "sorters": {
             "categories": "plants"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dir",
@@ -2794,7 +2814,7 @@
         "sorters": {
             "categories": "objects"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dira ",
@@ -2810,7 +2830,7 @@
         "sorters": {
             "categories": "objects"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "diril",
@@ -2838,7 +2858,7 @@
         "sorters": {
             "categories": "actions"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dojz",
@@ -2848,7 +2868,7 @@
         "sorters": {
             "categories": "family"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dol",
@@ -2864,7 +2884,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dolatajz",
@@ -2874,7 +2894,7 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dolduin",
@@ -2884,7 +2904,7 @@
         "sorters": {
             "categories": "communication"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dolejz",
@@ -2894,7 +2914,7 @@
         "sorters": {
             "categories": "colors"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "doliril",
@@ -2910,7 +2930,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "dolish",
@@ -2919,7 +2939,10 @@
         "Meanings": "in which",
         "sorters": {
             "categories": "",
-            "sort": ["in which", "where"]
+            "sort": [
+                "in which",
+                "where"
+            ]
         }
     },
     {
@@ -2929,9 +2952,12 @@
         "Meanings": "place (singular is 'domi')",
         "sorters": {
             "categories": "location",
-            "sort": ["place", "location"]
+            "sort": [
+                "place",
+                "location"
+            ]
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "domaesh",
@@ -2941,7 +2967,7 @@
         "sorters": {
             "categories": "emotions"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "domiyev",
@@ -2950,9 +2976,11 @@
         "Meanings": "'place mind'. The belief that the physical environment you're in shapes your thoughts.",
         "sorters": {
             "categories": "location",
-            "sort": ["ambiance"]
+            "sort": [
+                "ambiance"
+            ]
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "don",
@@ -2963,7 +2991,7 @@
             "categories": "numbers",
             "sort": "four"
         },
-        "etymology":{}
+        "etymology": {}
     },
     {
         "Word": "doneq",
@@ -2972,12 +3000,20 @@
         "Meanings": "become / be shaped by (in the sense that a potter would shape clay)",
         "sorters": {
             "category": [],
-            "qualities": ["reflexive"],
-            "sort": ["to become", "become", "to be shaped by"]
+            "qualities": [
+                "reflexive"
+            ],
+            "sort": [
+                "to become",
+                "become",
+                "to be shaped by"
+            ]
         },
         "etymology": {
-            "related words": ["qidoneq"]
-        } 
+            "related words": [
+                "qidoneq"
+            ]
+        }
     },
     {
         "Word": "donetsuret",
@@ -2986,7 +3022,9 @@
         "Meanings": "to shape/be shaped by agitation/lack of clarity",
         "sorters": {
             "categories": "emotions",
-            "sort": ["to shape"]
+            "sort": [
+                "to shape"
+            ]
         },
         "etymology": {
             "relatedWords": "tsuretse"
@@ -3001,9 +3039,7 @@
             "categories": "food",
             "sort": "boil"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "dorish",
@@ -3043,9 +3079,7 @@
         "sorters": {
             "categories": "objects"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "dov ",
@@ -3099,9 +3133,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "duleyov",
@@ -3111,9 +3143,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "duliq",
@@ -3123,9 +3153,7 @@
         "sorters": {
             "categories": "science"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "dulun",
@@ -3141,9 +3169,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "dun",
@@ -3153,9 +3179,7 @@
         "sorters": {
             "categories": "numbers"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "dunaev",
@@ -3171,9 +3195,7 @@
         "sorters": {
             "categories": "location"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "dushel",
@@ -3190,9 +3212,7 @@
         "sorters": {
             "categories": "location"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "duvlod",
@@ -3202,9 +3222,7 @@
         "sorters": {
             "categories": "architecture"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "ebe ",
@@ -3213,9 +3231,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "echera",
@@ -3225,9 +3241,7 @@
         "sorters": {
             "categories": "types of people"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "edanet",
@@ -3243,9 +3257,7 @@
         "sorters": {
             "categories": "music"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "edin",
@@ -3255,9 +3267,7 @@
         "sorters": {
             "categories": "plants"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "edore",
@@ -3267,9 +3277,7 @@
         "sorters": {
             "categories": "geography"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "efa",
@@ -3279,9 +3287,7 @@
         "sorters": {
             "categories": "meta-conversational"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "efash",
@@ -3297,9 +3303,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "ehavr",
@@ -3315,9 +3319,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "ekain",
@@ -3327,9 +3329,7 @@
         "sorters": {
             "categories": "art"
         },
-        "etymology": {
-
-        }
+        "etymology": {}
     },
     {
         "Word": "eker ",
@@ -3337,12 +3337,17 @@
         "Part of Speech": "noun",
         "Meanings": "shame",
         "sorters": {
-            "categories":["emotions"],
-            "qualities": ["jargon"],
-            "sort": ["shame"]
+            "categories": [
+                "emotions"
+            ],
+            "qualities": [
+                "jargon"
+            ],
+            "sort": [
+                "shame"
+            ]
         },
-        "etymology": {
-        }
+        "etymology": {}
     },
     {
         "Word": "ekereth",
@@ -3352,8 +3357,7 @@
         "sorters": {
             "categories": "emotions"
         },
-        "etymology": {
-        }
+        "etymology": {}
     },
     {
         "Word": "elat",
@@ -3369,8 +3373,7 @@
         "sorters": {
             "categories": "emotions"
         },
-        "etymology": {
-        }
+        "etymology": {}
     },
     {
         "Word": "elemet",
@@ -3386,8 +3389,7 @@
         "sorters": {
             "categories": "body"
         },
-        "etymology": {
-        }
+        "etymology": {}
     },
     {
         "Word": "eleteil",
@@ -3401,9 +3403,16 @@
         "Part of Speech": "noun",
         "Meanings": "\"benefit of the doubt.\" Your willingness to believe that people who do things differently (or believe things you think are stupid, wrong or dangerous), are not bad people who want to destroy you, but that they have some reasonable cause for their actions/thoughts.",
         "sorters": {
-            "sort": ["benefit of the doubt"],
-            "categories": ["emotions, positive", "Community Building"],
-            "qualities": ["jargon"]
+            "sort": [
+                "benefit of the doubt"
+            ],
+            "categories": [
+                "emotions, positive",
+                "Community Building"
+            ],
+            "qualities": [
+                "jargon"
+            ]
         }
     },
     {
@@ -3424,9 +3433,18 @@
         "Part of Speech": "noun",
         "Meanings": " trust; specifically the trust that develops when an authority has power and does not abuse it. This trust is largely responsible for society working, and is not possible if those in power are forbidden every excess or wrongful use of their power.",
         "sorters": {
-            "categories": "emotions, positive",
-        "Ai-Naidar
-        }i Jargon": "Community Building"
+            "sort": [
+                "trust"
+            ],
+            "categories": [
+                "emotions, positive",
+                "Community Building"
+            ],
+            "qualities": [
+                "jargon"
+            ]
+        },
+        "etymology": {}
     },
     {
         "Word": "emejars ",
@@ -3434,9 +3452,14 @@
         "Part of Speech": "noun",
         "Meanings": " a fight caused by big, existing emotional problems between two people",
         "sorters": {
+            "sort": [
+                "fight",
+                "argument"
+            ],
             "categories": "communication"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "emeth ",
         "Pronunciation": "[ eh MEHTH ]",
@@ -3450,17 +3473,26 @@
         "Meanings": "chain; biological concept, of self as part of a long, unbroken line of blood family, from ancestors to children. Has connotations of eternity and immortality, but without the strong sense of individual persistence.",
         "sorters": {
             "categories": "family",
-        "etymology
-        }.roots": "(formed from 'emeth')"
+            "sort": [
+                "chain",
+                "geanology",
+                "ancestry"
+            ]
+        },
+        "etymology": "formed from 'emeth'"
     },
     {
-        "Word": "en ",
+        "Word": "en",
         "Part of Speech": "conjunction",
         "Meanings": "as'. Used as standalone comparative for emphasis.'",
         "sorters": {
-            "categories": "meta-conversational"
+            "categories": "meta-conversational",
+            "sort": [
+                "as"
+            ]
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "enaima",
         "Pronunciation": "[ eh nai MAH ]",
@@ -3489,7 +3521,8 @@
         "sorters": {
             "categories": "clothes"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "enil",
         "Pronunciation": "[ eh NEEL ]",
@@ -3511,16 +3544,26 @@
         "sorters": {
             "categories": "time"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "eqebi",
         "Pronunciation": "[ eh qeh bee ]",
         "Part of Speech": "noun",
-        "Meanings": "emotional/social vulnerability: refers to the likelihood of someone being healthy in society based on how well they are emotionally and socially supported. *used* to refer to the health of someone's reputation, but the meanings has migrated as the noble/regal classes went from aristocrat landholders to administrators.",
+        "Meanings": "emotional/social vulnerability: refers to the likelihood of someone being healthy in society based on how well they are emotionally and socially supported. *used* to refer to the health of someone's reputation, but the meaning has migrated as the noble/regal classes went from aristocrat landholders to administrators.",
         "sorters": {
-            "categories": "relationships",
-        "Ai-Naidar
-        }i Jargon": "nobles"
+            "categories": [
+                "relationships",
+                "nobles"
+            ],
+            "qualities": [
+                "jargon"
+            ],
+            "sort": [
+                "vulnerability",
+                "health"
+            ]
+        }
     },
     {
         "Word": "eqet",
@@ -3529,7 +3572,8 @@
         "sorters": {
             "categories": "family"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "eqi ",
         "Pronunciation": "[ eh KEE ]",
@@ -3538,7 +3582,8 @@
         "sorters": {
             "categories": "family"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "eqiv",
         "Pronunciation": "[ ehq EEV ]",
@@ -3547,7 +3592,8 @@
         "sorters": {
             "categories": "time"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "equril",
         "Pronunciation": "[ eh koo REEL ]",
@@ -3565,7 +3611,8 @@
         "sorters": {
             "categories": "travel"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "erith",
         "Pronunciation": "[ eh RIHTH ]",
@@ -3574,16 +3621,26 @@
         "sorters": {
             "categories": "locations"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "eritked",
         "Pronunciation": "[ eh RIT keh dee ]",
         "Part of Speech": "noun",
-        "Meanings": "city noble.",
+        "Meanings": "city noble",
         "sorters": {
-            "categories": "types of people",
-        "Ai-Naidar
-        }i Jargon": "caste-rank"
+            "categories": [
+                "types of people",
+                "caste-rank"
+            ],
+            "sort": [
+                "noble",
+                "city noble"
+            ]
+        },
+        "qualities": [
+            "jargon"
+        ]
     },
     {
         "Word": "esar ",
@@ -3600,7 +3657,8 @@
         "sorters": {
             "categories": "science"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "esheq",
         "Pronunciation": "[ eh SHEHK ]",
@@ -3615,7 +3673,8 @@
         "sorters": {
             "categories": "numbers"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "eshev",
         "Pronunciation": "[ eh SHEHV ]",
@@ -3624,7 +3683,8 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "eshul",
         "Pronunciation": "[ eh SHOOL ]",
@@ -3648,12 +3708,14 @@
     {
         "Word": "etaj",
         "Pronunciation": "[ eh TAJZ ]",
-        "Part of Speech": "verb",
+        "Part of Speech": ["verb", "noun"],
         "Meanings": "to regret (also a noun)",
         "sorters": {
-            "categories": "emotions"
+            "categories": "emotions",
+            "sort": ["regret"]
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "etevr",
         "Pronunciation": "[ eh TEHVR ]",
@@ -3685,7 +3747,8 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "evoq",
         "Pronunciation": "[ eh VOHQ ]",
@@ -3694,7 +3757,8 @@
         "sorters": {
             "categories": "clothes"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "evra",
         "Pronunciation": "[ EHV rah ]",
@@ -3703,7 +3767,8 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "evrauthen",
         "Pronunciation": "[ ehv rau thehn ]",
@@ -3712,7 +3777,8 @@
         "sorters": {
             "categories": "art"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "evrauthendar",
         "Pronunciation": "[ ehv rau thehn dahr ]",
@@ -3730,7 +3796,8 @@
         "sorters": {
             "categories": "legal"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fada",
         "Pronunciation": " [ fa DAH ]",
@@ -3739,7 +3806,8 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fadel",
         "Pronunciation": "[ fah DEHL ]"
@@ -3752,7 +3820,8 @@
         "sorters": {
             "categories": "numbers"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faedil",
         "Pronunciation": "[ fay DEEL ]",
@@ -3773,7 +3842,8 @@
         "sorters": {
             "categories": "time"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fael",
         "Pronunciation": "[ FAYL ]",
@@ -3782,7 +3852,8 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faeljza",
         "Pronunciation": "[ FAIL jzah ]",
@@ -3791,7 +3862,8 @@
         "sorters": {
             "categories": "time"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faen",
         "Pronunciation": "[ FAYN ]",
@@ -3806,7 +3878,8 @@
         "sorters": {
             "categories": "numbers"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faeth",
         "Pronunciation": "[ FAITH ]",
@@ -3827,7 +3900,8 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faid",
         "Pronunciation": "[ FYED ]",
@@ -3850,7 +3924,8 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fail",
         "Pronunciation": "[ FILE ]",
@@ -3859,16 +3934,19 @@
         "sorters": {
             "categories": "actions"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fain",
         "Pronunciation": "[ FEYEN ]",
         "Part of Speech": "verb",
         "Meanings": "to use",
         "sorters": {
-            "categories": "actions"
+            "sort": ["use"],
+            "categories": ["actions"]
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fainhaale",
         "Pronunciation": "[ FINE hah leh ]",
@@ -3889,7 +3967,8 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faireil",
         "Pronunciation": "[ fye RAIL ]",
@@ -3898,7 +3977,8 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fajza",
         "Pronunciation": "[ fah JZAH ]",
@@ -3913,7 +3993,8 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fal",
         "Pronunciation": "[ FAHL ]",
@@ -3922,7 +4003,8 @@
         "sorters": {
             "categories": "music"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "falde",
         "Pronunciation": "[ faal deh ]",
@@ -3931,7 +4013,8 @@
         "sorters": {
             "categories": "time"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faldequr",
         "Pronunciation": "[ falh deh COOR ]",
@@ -3940,7 +4023,8 @@
         "sorters": {
             "categories": "relationships"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faln",
         "Pronunciation": "[ FALHN]",
@@ -3949,7 +4033,8 @@
         "sorters": {
             "categories": "music"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "famel",
         "Pronunciation": "[ fah mehl ]",
@@ -3970,7 +4055,8 @@
         "sorters": {
             "categories": "size"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fase ",
         "Pronunciation": "[ fah SEH ]",
@@ -3990,7 +4076,8 @@
         "sorters": {
             "categories": "emotions, positive"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fathra",
         "Pronunciation": "[ FAH THRAA ]",
@@ -3999,7 +4086,8 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fathra bej ",
         "Pronunciation": "[ FAH THRAA behjz ]",
@@ -4008,7 +4096,8 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fathra dili ",
         "Pronunciation": "[ FAH THRAA dee lee]",
@@ -4017,17 +4106,21 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fathriked",
         "Pronunciation": "[ FA thri KEHD ]",
         "Part of Speech": "noun",
         "Meanings": "Decoration, an Ai-Naidar social caste; can refer to the caste itself or the individual fathriked within the caste. (sing. fathrikedi) ",
         "sorters": {
-            "categories": "types of people",
-        "Ai-Naidar
-        }i Jargon": "caste-rank"
+            "categories": ["types of people", "caste-rank"],
+            "qualities": [
+                "jargon", "title"
+            ],
+            "sort": ["decoration"]
     },
+},
     {
         "Word": "faulijz",
         "Pronunciation": "[ fow LEEJZ ]",
@@ -4036,7 +4129,8 @@
         "sorters": {
             "categories": "emotions, positive"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "faunith",
         "Pronunciation": "[ fow NEETH ]",
@@ -4045,7 +4139,8 @@
         "sorters": {
             "categories": "clothes"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fausen",
         "Pronunciation": "[ fow SEHN ]",
@@ -4066,7 +4161,8 @@
         "sorters": {
             "categories": "numbers"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fela",
         "Pronunciation": "[ feh lah ]",
@@ -4097,18 +4193,22 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {}
+    },
     {
         "Word": "fenemijz",
         "Pronunciation": "[ fehn eh MEEJZ ]",
         "Part of Speech": "noun ",
         "Meanings": "atmosphere, physical (specifically, the environment and the objects in it that have been arranged by a people)",
         "sorters": {
-            "categories": "society",
-        "etymology
-        }.roots": "Formed out of 'fenijz' smashing into 'met' (the word for body)",
-        "etymology.relatedWords": "nofenijz, sefenijz",
-        "Ai-Naidari Jargon": "community building"
+            "categories": ["society", "Community Building"],
+            "qualities": ["jargon"],
+            "sort": ["atmosphere", "ambiance"]
+        },
+        "etymology": {
+            "roots": "Formed out of 'fenijz' smashing into 'met' (the word for body)",
+            "related words": ["nofenijz", "sefenijz"]
+        } 
     },
     {
         "Word": "fenza ",
@@ -4116,9 +4216,13 @@
         "Part of Speech": "noun",
         "Meanings": "fur (not interchangeable with hair, a different word). Ai-Naidari fur is very short and very fine, more like felt or velveteen than animal fur. Singular fenzani refers to a pelt (on or off a person), not to a single hair.",
         "sorters": {
-            "categories": "body"
+            "categories": "body",
+            "sort": ["fur", "pelt"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fera ",
         "Pronunciation": "[ FAIR ah ]",
@@ -4139,7 +4243,10 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "ferethaj",
         "Part of Speech": "noun",
@@ -4147,7 +4254,10 @@
         "sorters": {
             "categories": "relationships"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "ferhefa",
         "Pronunciation": "[ fair HEHF ah ]",
@@ -4162,7 +4272,10 @@
         "sorters": {
             "categories": "size"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fesh",
         "Part of Speech": "verb",
@@ -4176,7 +4289,10 @@
         "sorters": {
             "categories": "knowledge"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "feshinil",
         "Pronunciation": "[ feh shee neel ]",
@@ -4191,7 +4307,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fete",
         "Pronunciation": "[ feh teh ]",
@@ -4200,7 +4319,10 @@
         "sorters": {
             "categories": "travel"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "feth",
         "Pronunciation": "[ FEHTH ]",
@@ -4227,7 +4349,10 @@
         "sorters": {
             "categories": "art"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fi",
         "Pronunciation": "[ FEE ]",
@@ -4242,7 +4367,10 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fihh",
         "Pronunciation": "[ FEEHH ]",
@@ -4257,7 +4385,10 @@
         "sorters": {
             "categories": "emotional traits"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fil ",
         "Pronunciation": "[ FEEL ]",
@@ -4272,7 +4403,10 @@
         "sorters": {
             "categories": "religion"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "filchol",
         "Pronunciation": "[ FEEL chohl ]",
@@ -4281,7 +4415,10 @@
         "sorters": {
             "categories": "religion"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fild",
         "Pronunciation": "[ FEELD ]",
@@ -4308,7 +4445,10 @@
         "sorters": {
             "categories": "religion"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "filin",
         "Part of Speech": "noun",
@@ -4316,7 +4456,10 @@
         "sorters": {
             "categories": "plants"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "filirij ",
         "Pronunciation": "[ fee lih REEJZ ]",
@@ -4331,7 +4474,10 @@
         "sorters": {
             "categories": "travel"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fiti",
         "Pronunciation": "[ FEE tee ]",
@@ -4340,7 +4486,10 @@
         "sorters": {
             "categories": "actions"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "foder",
         "Pronunciation": "[ foh DEHR ]",
@@ -4349,16 +4498,23 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fof",
         "Pronunciation": "[ FOF ]",
         "Part of Speech": "noun",
         "Meanings": "bag, sack",
         "sorters": {
-            "categories": "objects"
+            "categories": "objects",
+            "sort": ["bag", "sack"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fojejz ",
         "Pronunciation": "[foh JEHJZ ]",
@@ -4367,7 +4523,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fojzen",
         "Pronunciation": "[ foh JZEN ]",
@@ -4376,7 +4535,10 @@
         "sorters": {
             "categories": "relationships"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fol",
         "Pronunciation": "[ fohl ]",
@@ -4391,7 +4553,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "folesh",
         "Pronunciation": "[ foh LESH ]",
@@ -4400,7 +4565,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "folhaqet",
         "Pronunciation": "[ fohl HAH keht ]",
@@ -4421,7 +4589,10 @@
         "sorters": {
             "categories": "objects"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fomir",
         "Pronunciation": "[ foh MEER ]",
@@ -4442,7 +4613,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "foneth ",
         "Pronunciation": "[ foh NEHTH ]",
@@ -4491,7 +4665,10 @@
         "sorters": {
             "categories": "travel"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "foth",
         "Pronunciation": "[ FOHTH ]",
@@ -4512,7 +4689,10 @@
         "sorters": {
             "categories": "numbers"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "frafra",
         "Pronunciation": "[ frah frah ]",
@@ -4521,7 +4701,10 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fren",
         "Pronunciation": "[ FREHN ]",
@@ -4554,7 +4737,10 @@
         "sorters": {
             "categories": "colors"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fulgeth",
         "Pronunciation": "[ fool GEHTH ]",
@@ -4563,7 +4749,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "fulojz",
         "Pronunciation": "[ fool ojz]",
@@ -4578,7 +4767,10 @@
         "sorters": {
             "categories": "physical locations"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "furor",
         "Pronunciation": "[ foo ROHR ]",
@@ -4593,7 +4785,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "gab",
         "Pronunciation": "[ gahb ]",
@@ -4608,7 +4803,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "gabisijz",
         "Pronunciation": "[ gah bih SEEJZ ]",
@@ -4617,7 +4815,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "gabisin",
         "Pronunciation": "[ gah beh SEEN ]",
