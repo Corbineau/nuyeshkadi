@@ -5756,7 +5756,10 @@
         "sorters": {
             "categories": "emotions, positive"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "has ",
         "Pronunciation": "[ hahs]",
@@ -5765,7 +5768,10 @@
         "sorters": {
             "categories": "art"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "has senulij",
         "Part of Speech": "noun",
@@ -5773,7 +5779,10 @@
         "sorters": {
             "categories": "art"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "haset",
         "Pronunciation": "[ hah SEHT ]",
@@ -5788,7 +5797,10 @@
         "sorters": {
             "categories": "actions"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hasmera",
         "Pronunciation": "[ hahs MARE ah ]",
@@ -5797,7 +5809,10 @@
         "sorters": {
             "categories": "manners"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hauneth",
         "Pronunciation": "[ HOW neth ]",
@@ -5806,7 +5821,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hav",
         "Pronunciation": "[ HAHV ]",
@@ -5821,7 +5839,10 @@
         "sorters": {
             "categories": "emotions, positive"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "havyat",
         "Pronunciation": "[ hahv YAHT ]",
@@ -5830,7 +5851,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "havyatil",
         "Pronunciation": "[ hav YAH TEEL ]",
@@ -5851,7 +5875,10 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hef",
         "Pronunciation": "[ HEHF ]",
@@ -5860,7 +5887,10 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hefa",
         "Pronunciation": "[ heh FAH ]",
@@ -5869,7 +5899,10 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hefshe",
         "Pronunciation": "[ hef SHEH ]",
@@ -5878,7 +5911,10 @@
         "sorters": {
             "categories": "caste"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hekef",
         "Pronunciation": "[ heh kehf ]",
@@ -5887,7 +5923,10 @@
         "sorters": {
             "categories": "objects"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hekefiniki",
         "Pronunciation": "[ heh kehf ee nee kee ]",
@@ -5908,7 +5947,10 @@
         "sorters": {
             "categories": "clothes"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "helun",
         "Pronunciation": "[ heh LOON ]",
@@ -5917,7 +5959,10 @@
         "sorters": {
             "categories": "relationships"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "henej",
         "Pronunciation": "[ heh NEHJZ ]",
@@ -5926,7 +5971,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hepajz",
         "Pronunciation": "[ heh PAHJZ ]",
@@ -5940,7 +5988,10 @@
         "sorters": {
             "categories": "science"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hes",
         "Pronunciation": "[ HEHS ]",
@@ -5949,7 +6000,10 @@
         "sorters": {
             "categories": "food"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "heth",
         "Pronunciation": "[ HEHTH ]",
@@ -5958,7 +6012,10 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "heth",
         "Pronunciation": "[ HEHTH ]",
@@ -5967,17 +6024,22 @@
         "sorters": {
             "categories": "family"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hethenil",
         "Pronunciation": "[ hehth eh neel ]",
         "Part of Speech": "verb",
         "Meanings": "to interview community members in order to derive a sense of the community's health",
         "sorters": {
-            "categories": "society",
-        "etymology
-        }.roots": "from heth (to ask) and enil (to see obliquely)",
-        "Ai-Naidari Jargon": "Community Building"
+            "categories": ["society", "Community Building"],
+            "qualities": ["jargon"]
+        },
+        "etymology": {
+            "roots":["from heth (to ask) and enil (to see obliquely)"]
+        }
     },
     {
         "Word": "hev",
@@ -5985,9 +6047,12 @@
         "Part of Speech": "noun",
         "Meanings": "boxes, crates; containers",
         "sorters": {
-            "categories": "objects"
+            "categories": ["objects"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hha",
         "Pronunciation": "[ HHAH ]",
@@ -6000,45 +6065,54 @@
         "Part of Speech": "noun",
         "Meanings": "spice plant, rare and much prized, that must be found because it does not respond well to cultivation\r\n",
         "sorters": {
-            "categories": "cooking\r\n"
-        },
-    }
+            "categories": ["cooking"]
+        }
+    },
     {
         "Word": "hhadtan",
         "Pronunciation": "[ hhadtahn ]",
         "Part of Speech": "noun",
         "Meanings": "needs that can only be met if they are not requested.",
         "sorters": {
-            "categories": "relationships"
+            "categories":[ "relationships"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhadtavr",
         "Pronunciation": "[ hhad tahvr ]",
         "Part of Speech": "verb",
         "Meanings": "to need things that cannot be asked for; came about in a roundabout way, through observation of a rare spice plant that is hard to cultivate in a farmed context because it has so many paradoxical and difficult to predict or observe needs.",
         "sorters": {
-            "categories": "relationships"
+            "categories": ["relationships"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhaduvlod",
         "Pronunciation": "[ hhah doov LOHD ]",
         "Part of Speech": "noun",
         "Meanings": "walls, interior (on a building not used by people for living spaces); literally 'not outside wall')",
         "sorters": {
-            "categories": "architecture"
+            "categories": ["architecture"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhaf ",
         "Pronunciation": "[ HHAHF ]",
         "Part of Speech": "verb",
         "Meanings": "to maintain (relationships/people/society)",
         "sorters": {
-            "categories": "society",
-        "Ai-Naidar
-        }i Jargon": "Community Building"
+            "categories": ["society", "Community Building"],
+            "qualities": ["jargon"]
+        }
     },
     {
         "Word": "hhafran",
@@ -6048,21 +6122,27 @@
         "sorters": {
             "categories": "propriety"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhakol",
         "Pronunciation": "[ hhah kohl ]",
         "Part of Speech": "verb",
         "Meanings": "to deconstruct (in the logical sense)",
         "sorters": {
-            "categories": "logic"
+            "categories": ["logic"]
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhana",
         "Pronunciation": "[ hhah nah ]",
         "Part of Speech": "verb",
-        "Meanings": "to shatter"
+        "Meanings": ["to shatter"]
     },
     {
         "Word": "hhanaqest",
@@ -6076,9 +6156,10 @@
         "Part of Speech": "adjective",
         "Meanings": "jealous; unwilling or unable to share",
         "sorters": {
-            "categories": "emotions, negative"
-        },
-    }
+            "categories": ["emotions, negative"],
+            "sort": ["jealous"]
+        }
+    },
     {
         "Word": "hhaqet",
         "Pronunciation": "[ hhah QEHT ]",
@@ -6087,7 +6168,10 @@
         "sorters": {
             "categories": "society"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hharane ",
         "Pronunciation": "[ hhah RAA neh ]",
@@ -6095,8 +6179,8 @@
         "Meanings": "caste-peer.",
         "sorters": {
             "categories": "caste"
-        },
-    }
+        }
+    },
     {
         "Word": "hhashan ",
         "Pronunciation": "[ HHAH shahn ]",
@@ -6109,9 +6193,11 @@
         "Part of Speech": "noun",
         "Meanings": "thirst",
         "sorters": {
-            "categories": "body",
-        "etymology
-        }.roots": "from 'hha' (not) and 'shanul' (water)"
+            "categories": ["body"],
+            "sort": ["thirst"]
+        },
+        "etymology": {
+            "roots": "from 'hha' (not) and 'shanul' (water)"}
     },
     {
         "Word": "hhatsaven",
@@ -6126,8 +6212,8 @@
         "Meanings": "caste-rank; literally \"responsibility.\"",
         "sorters": {
             "categories": "caste"
-        },
-    }
+        }
+    },
     {
         "Word": "hhelfen",
         "Pronunciation": "[ hhehl FEHN ]",
@@ -6135,8 +6221,8 @@
         "Meanings": " the area beneath the jaw and above the neck; the underside of the jaw.",
         "sorters": {
             "categories": "body"
-        },
-    }
+        }
+    },
     {
         "Word": "hhesin",
         "Pronunciation": "[ hheh SEEN ]",
@@ -6152,7 +6238,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhirlif",
         "Pronunciation": "[ hheer LEEF ]",
@@ -6161,7 +6250,10 @@
         "sorters": {
             "categories": "relationships"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhithhir",
         "Pronunciation": "[ hhihth heer ]",
@@ -6188,7 +6280,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hholnuil",
         "Pronunciation": "[ HHOHL noo eel ]",
@@ -6197,7 +6292,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhora",
         "Pronunciation": "[ hhOHR ah ]",
@@ -6206,7 +6304,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hhorash",
         "Pronunciation": "[ hhohr AHSH ]",
@@ -6215,7 +6316,10 @@
         "sorters": {
             "categories": "emotions, negative"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hif",
         "Pronunciation": "[ HIF ]",
@@ -6224,7 +6328,10 @@
         "sorters": {
             "categories": "manners"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hijz",
         "Pronunciation": "[ HEEJZ ]",
@@ -6245,7 +6352,10 @@
         "sorters": {
             "categories": "science"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hild",
         "Pronunciation": "[ HEELD ]",
@@ -6254,7 +6364,10 @@
         "sorters": {
             "categories": "plants"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hildodash",
         "Pronunciation": "[ heel doh dahsh ]",
@@ -6269,7 +6382,10 @@
         "sorters": {
             "categories": "science"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hin",
         "Pronunciation": "[ HIIN ]",
@@ -6278,7 +6394,10 @@
         "sorters": {
             "categories": "numbers"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "hithain ",
         "Pronunciation": "[ hih THIGHN ]",
@@ -6311,7 +6430,10 @@
         "sorters": {
             "categories": "body"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "holejz",
         "Pronunciation": "[ hoh LEJZ ]",
@@ -6320,7 +6442,10 @@
         "sorters": {
             "categories": "communication"
         },
-    }
+        "etymology": {
+
+        }
+    },
     {
         "Word": "holin",
         "Pronunciation": "[ ho LEEN ]",
