@@ -5,23 +5,23 @@ const Schema = mongoose.Schema;
 // this will be our data structure for the words themselves
 const Yesh = new Schema(
   {
-    word: String,
-    definitions: [
+    Word: String,
+    Definitions: [
       {
-      key: Number,
-      partOfSpeech: Array,
-      pronounciation: String,
-      meaning: String,
-      sorters: {
-        category: Array,
-        qualities: Array,
-        sort: Array
+      Key: Number,
+      PartOfSpeech: Array,
+      Pronounciation: String,
+      Meaning: String,
+      Sorters: {
+        Categories: Array,
+        Qualities: Array,
+        Sort: Array
       },
-      etymology: {
-        source: String,
-        relatedWords: Array,
-        roots: Array,
-        morphs: {
+      Etymology: {
+        Source: String,
+        RelatedWords: Array,
+        Roots: Array,
+        Morphs: {
             verb: {
               infinitive: String,
               regular: Boolean
@@ -36,8 +36,8 @@ const Yesh = new Schema(
           }
       }
     }],
-    orthography: String,
-    notes: String
+    Orthography: String,
+    Notes: String
   }
 );
 
