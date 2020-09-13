@@ -102,7 +102,7 @@ class Wod extends Component {
     }
 
     runJob = function () { schedule.scheduleJob('0 0 */1 * *', this.getNewWord()) };
-    //need to verify this will run even if the component doesn't load. May need to live on the app.
+    //need to verify this will run even if the component doesn't load. May need to live on the app. Also, consider pre-populating the year, and having a manual way to do so. 
 
     getVetanel = function (yeshi) {
         //pull the word data from the Yesh db, using a find.
