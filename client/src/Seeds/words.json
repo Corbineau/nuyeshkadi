@@ -1,0 +1,23 @@
+[
+    {
+      "word": "qet",
+      "meanings": [
+        {
+        "key": 1,
+        "partOfSpeech": "noun", 
+        "pronounciation": "KEHT",
+        "meaning": "responsibility-defenselessness; quality describing the social duty one one has to another person based on your responsibility to them and how defenseless they are. To an adult, a child will have more qet than another adult. Most qet is relative based on caste and rank, but some qet is absolute (children and self, for instance).",
+        "sorters": {
+          "category": ["society"],
+          "qualities": ["1st declension", "gradient"],
+          "sort": ["responsibility"]
+        },
+        "etymology": {
+          "source": "",
+          "relatedWords": ["qetaim", "aiqet", "qetaim nama", "qest", "veshhaqet", "yeliqet", "aiqethhir", "aiqetil", "auneqet", "baihhaqet", "eqet", "folhaqet", "gajzhaqet", "hhaqet", "iemaqet", "kishhaqet", "kiveqt", "maqet", "meqet", "naimeqet", "nemreqet", "nemreqet qera"],
+          "roots": []
+        }
+      }],
+        "orthography": "qet"
+      }
+]
