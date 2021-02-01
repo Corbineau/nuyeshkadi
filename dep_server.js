@@ -4,32 +4,29 @@ const express = require('express');
 const routes = require("./routes");
 const bodyParser = require('body-parser');
 const logger = require('morgan');
-const { Client } = require('pg');
 require('dotenv').config();
 
 const app = express();
 const API_PORT = process.env.API_PORT || 3001;
 
-// this is our postGres database
+// this is our MongoDB database
+const DBUSER = process.env.DBUSER;
+const DBPASS = process.env.DBPASS;
+const MONGODB_URI = process.env.MONGODB_URI || `mongodb:${DBUSER}:${DBPASS}@ds347367.mlab.com:47367/heroku_dwr69vg9`  
+mongoose.connect(MONGODB_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+})
+    .then(() => console.log(`DB Connection Ok!`))
+    .catch(err => {
+        console.log(`DB Connection Error: ${err.message}`);
+    });
+let db = mongoose.connection;
 
+db.once('open', () => console.log('connected to the database'));
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
-
-client.connect();
-
-client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-  if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-  client.end();
-});
-
+// checks if connection with the database is successful
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
