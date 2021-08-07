@@ -8,6 +8,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "glob-parent": ">=5.1.2",
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
     "axios": "^0.21.1",
