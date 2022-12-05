@@ -11,7 +11,7 @@
     "glob-parent": ">=5.1.2",
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015-ie": "^6.7.0",
